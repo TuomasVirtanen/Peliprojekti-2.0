@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4423933277707567186}
   - component: {fileID: 4423933277707567215}
   - component: {fileID: 4423933277707567214}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CoffeMugEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423933277707567188}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.7247636, y: -2.39511, z: 3.4077778}
-  m_LocalScale: {x: -1.357478, y: 1.3574781, z: 1.3574781}
+  m_LocalScale: {x: -1.9212387, y: 1.9212388, z: 1.9212388}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f2d189d8821fff42bf70854904ccaa2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 029b8bce0cf63ad4f8669b9697090abb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -95,17 +95,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4423933277707567188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0355d9abfcf8e54487eee1a4a69efd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ecc8af2c645c5c47bebf4e6ef9097be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
-  range: 0.3
-  rangeColliderDistance: 0.6
-  damage: 1
+  attackCooldown: 0
+  range: 0
+  rangeColliderDistance: 0
+  damage: 0
   boxCollider: {fileID: 4423933277707567186}
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+  maxHealth: 100
 --- !u!61 &4423933277707567186
 BoxCollider2D:
   m_ObjectHideFlags: 0
