@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log("took damage");
+        anim.SetTrigger("hurt");
 
         if(currentHealth <= 0)
         {
@@ -110,7 +111,7 @@ public class Enemy : MonoBehaviour
         if(PlayerInSight())
         {
             // Pelaaja ottaa vahinkoa, jos pelaaja on vielä näkökentässä
-            // player.Health.TakeDamage(damge);
+            // player.Health.TakeDamage(damage);
         }
     }
 
