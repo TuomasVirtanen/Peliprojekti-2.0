@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public float jump;
 
+    bool isFalling = false;
+    bool isJumping = false;
     bool isGrounded = false; 
     public Transform isGroundedChecker; 
     public float checkGroundRadius; 
@@ -33,6 +35,7 @@ public class PlayerMove : MonoBehaviour
         CheckIfGrounded();
         Move();
         Jump();
+        Fall();
         BetterJump();
     }
 
@@ -48,7 +51,7 @@ public class PlayerMove : MonoBehaviour
     // If the input is moving the player right and the player is facing left -> flip the player
 	if (moveBy > 0 && !FacingRight)
 	{
- 
+
 		// Switch the way the player is labelled as facing.
 		FacingRight = !FacingRight;
 
@@ -69,11 +72,27 @@ public class PlayerMove : MonoBehaviour
     
 
     }
-
+    //Fall animation condition
+    void Fall()
+    {
+        if (rb.velocity.y < -0.01) {
+            animator.SetBool("isFalling", true);
+        }
+        else {
+            animator.SetBool("isFalling", false);
+        }
+    }
+    // Jump animation condition
     void Jump()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             rb.velocity = new Vector2(rb.velocity.x, jump);
+        }
+        if (rb.velocity.y > 0.01) {
+            animator.SetBool("isJumping", true);
+        }
+        else {
+            animator.SetBool("isJumping", false);
         }
     }
 
@@ -82,18 +101,15 @@ public class PlayerMove : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
         } else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
             rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }   
-}
-
+        }  
+    }
+    //Checks if player is touching ground
     void CheckIfGrounded() { 
         Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer); 
         if (collider != null) { 
-            isGrounded = true; 
+            isGrounded = true;
         } else { 
-            isGrounded = false; 
-        } 
-
-
-
-}
+            isGrounded = false;
+        }
+    }
 }
