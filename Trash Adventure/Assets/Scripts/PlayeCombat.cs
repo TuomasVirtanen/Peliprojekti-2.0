@@ -10,15 +10,20 @@ public class PlayeCombat : MonoBehaviour
 
     public float attackRange = 1;
     public int attackDamage = 20; 
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
 
     public Animator animator;
 
     void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Tab))
+    {   
+        if(Time.time >= nextAttackTime)
         {
-            Attack();
-            
+            if(Input.GetKeyDown(KeyCode.Tab))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 
