@@ -20,31 +20,44 @@ public class Enemy : MonoBehaviour
 
     // Viittaukset
     // TODO: private Health playerHealth
+
     private EnemyPatrol enemyPatrol;
 
+    [Header("Healthbar")]
     [SerializeField]
     private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
+
+    [SerializeField, Tooltip("Mikä on kyseisen peliobjektin healthbar")]
+    private Healthbar healthBar;
+    
     int currentHealth;
 
     void Awake()
     {
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
         anim = GetComponent<Animator>();
+
+        healthBar.setMaxHealth(maxHealth);//UI
+        healthBar.setHealth(maxHealth);//UI
     }
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+
+        healthBar.setMaxHealth(maxHealth);//UI
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("took damage");
+        Debug.Log("took damage" + currentHealth);
         anim.SetTrigger("hurt");
 
-        if(currentHealth <= 0)
+        healthBar.setHealth(currentHealth);//UI
+
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -81,11 +94,13 @@ public class Enemy : MonoBehaviour
         //disable enemy
 
         Debug.Log("Enemy died");
-
-        //Miksi ei tuhota peliobjektia? Vastaa pls vaik discordin code-kanavalla.
-        GetComponent<Collider2D>().enabled = false;
+        Destroy(gameObject);//Tuhoaa peliobjektin
+        /*
+         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-        
+        */
+
+
     }
 
     private bool PlayerInSight()
