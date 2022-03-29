@@ -22,7 +22,8 @@ public class Enemy : MonoBehaviour
     // TODO: private Health playerHealth
     private EnemyPatrol enemyPatrol;
 
-    public int maxHealth = 100;
+    [SerializeField]
+    private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
     int currentHealth;
 
     void Awake()
@@ -81,6 +82,7 @@ public class Enemy : MonoBehaviour
 
         Debug.Log("Enemy died");
 
+        //Miksi ei tuhota peliobjektia? Vastaa pls vaik discordin code-kanavalla.
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         
