@@ -8,12 +8,33 @@ public class PlayeCombat : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
+
+    [Header("Attack stats")]
     public float attackRange = 1;
     public int attackDamage = 20; 
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
     public Animator animator;
+
+    [Header("Health + UI implementation")]
+    [SerializeField]
+    private int maxHealth = 100; //Pelaajalla on 100HP defaulttina
+    int currentHealth;
+    [SerializeField, Tooltip("Mikä on kyseisen peliobjektin healthbar")]
+    private Healthbar healthBar;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+
+        healthBar.setMaxHealth(maxHealth);//UI
+        healthBar = healthBar.GetComponent<Healthbar>();
+        if (healthBar == null)
+        {
+            Debug.Log("Enemy " + this.gameObject + " doesn't have the healthbar component added to it");
+        }
+    }
 
     void Update()
     {   
@@ -44,6 +65,22 @@ public class PlayeCombat : MonoBehaviour
     void EndAttackAnim()
     {
         animator.SetBool("isAttacking", false);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Player health: " + currentHealth);
+
+
+        animator.SetTrigger("hurt");
+
+        healthBar.setHealth(currentHealth);//UI
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("PLAYER HAS DIED.");
+        }
     }
 
     void OnDrawGizmosSelected()

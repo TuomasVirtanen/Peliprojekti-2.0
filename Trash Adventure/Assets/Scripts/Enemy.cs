@@ -23,30 +23,41 @@ public class Enemy : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
 
+
     [Header("Healthbar")]
     [SerializeField]
     private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
 
     [SerializeField, Tooltip("Mikä on kyseisen peliobjektin healthbar")]
     private Healthbar healthBar;
-    
+    [SerializeField, Tooltip("Kuolema_efekti")]
+    private ParticleSystem death;
+
     int currentHealth;
+    RaycastHit2D hit;
 
     void Awake()
     {
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
         anim = GetComponent<Animator>();
 
-        healthBar.setMaxHealth(maxHealth);//UI
-        healthBar.setHealth(maxHealth);//UI
+        healthBar.setMaxHealth(maxHealth);//UI 
     }
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+   
 
         healthBar.setMaxHealth(maxHealth);//UI
+        healthBar.setHealth(currentHealth);
+        healthBar = healthBar.GetComponent<Healthbar>();
+        if (healthBar == null)
+        {
+            Debug.Log("Enemy "+this.gameObject +" doesn't have the healthbar component added to it");
+        }
+
     }
 
     public void TakeDamage(int damage)
@@ -56,7 +67,6 @@ public class Enemy : MonoBehaviour
         anim.SetTrigger("hurt");
 
         healthBar.setHealth(currentHealth);//UI
-
         if (currentHealth <= 0)
         {
             Die();
@@ -66,7 +76,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-
         // Hyökkää, jos pelaaja on näkökentässä
         // Alkaa liikkumaan heti, kun pelaaja poistuu näkökentästä, vaikka olisi hyökkäysanimaatio kesken. Hyvä vai huono juttu??
         if(PlayerInSight())
@@ -77,6 +86,9 @@ public class Enemy : MonoBehaviour
                 
                 cooldownTimer = 0;
                 anim.SetTrigger("attack");
+              
+                DamagePlayer();
+                
             }
         }
 
@@ -92,28 +104,34 @@ public class Enemy : MonoBehaviour
         //Play dying animation
 
         //disable enemy
-
+        
+        Instantiate(death,transform.position, Quaternion.identity);
         Debug.Log("Enemy died");
         Destroy(gameObject);//Tuhoaa peliobjektin
+
         /*
          GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         */
-
-
     }
 
-    private bool PlayerInSight()
+    public bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * transform.localScale.x * rangeColliderDistance, 
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
+        hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * transform.localScale.x * rangeColliderDistance, 
+        new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
 
-        if(hit.collider != null)
+        if(hit.collider == null) { return false; } //Jos collider ei ole pelaaja, palauta false.
+        
+       
+        /*
+          if(hit.collider != null)
         {
-            // playerHealth = hit.transform.GetComponent<Health>();
+            
         }
+        */
 
-        return hit.collider != null;
+        
+        return hit.collider != null; //Muulloin colliderin on pakko olla pelaaja, joten palauta jees
     }
 
     private void OnDrawGizmos()
@@ -125,11 +143,15 @@ public class Enemy : MonoBehaviour
 
     private void DamagePlayer()
     {
+        //Odotetaan hetki ja sen jälkeen kun animaatio on "osumakohdalla", niin katsotaan onko pelaaja
+        //vieläkin näkökentässä ja tehdään siihen vahinkoa?
         if(PlayerInSight())
         {
-            // Pelaaja ottaa vahinkoa, jos pelaaja on vielä näkökentässä
-            // player.Health.TakeDamage(damage);
+
+            hit.transform.GetComponent<PlayeCombat>().TakeDamage(damage);
+
         }
+        
     }
 
 }

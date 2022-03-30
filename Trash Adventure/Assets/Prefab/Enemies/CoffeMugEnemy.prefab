@@ -98,15 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecc8af2c645c5c47bebf4e6ef9097be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0
-  range: 0
-  rangeColliderDistance: 0
-  damage: 0
+  attackCooldown: 3
+  range: 0.4
+  rangeColliderDistance: 0.33
+  damage: 40
   boxCollider: {fileID: 4423933277707567186}
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
   maxHealth: 100
+  healthBar: {fileID: 0}
+  death: {fileID: 133676282936407318, guid: d755a07ee4f231b4c9abc95cb4070b4c, type: 3}
 --- !u!61 &4423933277707567186
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -23,7 +23,10 @@ public class Healthbar : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Voi olla null, jos on pelaajahahmo, + parempi että on 1 debug logi kuin 50 per s 
+        if(child != null) { 
         transform.position = child.transform.position + hoverOffset;
+        }
     }
 
     private void Awake()
@@ -39,6 +42,7 @@ public class Healthbar : MonoBehaviour
     public void setMaxHealth(int health)
     {
         healthBar.maxValue = health;
+        setHealth(health);
     }
     
     public void setHealth(int health)
