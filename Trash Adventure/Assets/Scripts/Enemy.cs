@@ -113,6 +113,10 @@ public class Enemy : MonoBehaviour
          GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         */
+
+        //add points
+
+        PointSystem.instance.addPoints(100);
     }
 
     public bool PlayerInSight()
