@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     //Variable for speed that player is going to move at.
     //Change to private after last number has been decided.
     public float speed;
@@ -87,6 +89,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             rb.velocity = new Vector2(rb.velocity.x, jump);
+            CreateDust();
         }
         if (rb.velocity.y > 0.01) {
             animator.SetBool("isJumping", true);
@@ -111,5 +114,10 @@ public class PlayerMove : MonoBehaviour
         } else { 
             isGrounded = false;
         }
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 }

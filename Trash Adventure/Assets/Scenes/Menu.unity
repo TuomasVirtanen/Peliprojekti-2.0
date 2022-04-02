@@ -3560,7 +3560,7 @@ MonoBehaviour:
   minIntensity: 0
   maxIntensity: 1
   minSecondsBetween: 0.1
-  maxSecondsBetween: 0.6
+  maxSecondsBetween: 0.4
 --- !u!114 &2011203410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3588,7 +3588,7 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 63.02
   m_PointLightOuterAngle: 150
-  m_PointLightInnerRadius: 85.50585
+  m_PointLightInnerRadius: 65.67
   m_PointLightOuterRadius: 105.6
   m_PointLightDistance: 5
   m_PointLightQuality: 1

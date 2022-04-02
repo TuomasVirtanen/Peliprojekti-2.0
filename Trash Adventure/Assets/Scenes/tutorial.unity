@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabs:
-  - {fileID: 6536453893829895960, guid: 449cb2fa175c4405a9241133a7964dab, type: 3}
-  - {fileID: 8617790817824002642, guid: 4d6dfb33eb9f8490eb3ee3236cb84362, type: 3}
+  - {fileID: 6372819413892876305, guid: 2e2c8e239b7824355845aac7edd2e59b, type: 3}
+  - {fileID: 7279967814956740938, guid: 4d9820ede54ac44d18a173d7395cbacb, type: 3}
   VCam: {fileID: 686746949}
 --- !u!4 &87206182
 Transform:
@@ -606,7 +606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650305884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.853863, y: 0.6573863, z: -10}
+  m_LocalPosition: {x: -16.874342, y: 0.65830517, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
