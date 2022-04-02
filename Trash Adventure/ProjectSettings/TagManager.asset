@@ -8,6 +8,7 @@ TagManager:
   - Plastic
   - Metal
   - Bio
+  - Spawnpoint
   layers:
   - Default
   - TransparentFX
