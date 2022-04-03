@@ -5103,7 +5103,7 @@ MonoBehaviour:
   attackRate: 2
   animator: {fileID: 5934333236206907350}
   maxHealth: 100
-  healthBar: {fileID: 0}
+  player_HP: {fileID: 7920807471709440086, guid: 7ee75361d51045e4ca3cfeb2a1953d13, type: 3}
 --- !u!95 &5934333236206907350
 Animator:
   serializedVersion: 3

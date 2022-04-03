@@ -44,9 +44,9 @@ public class Enemy : MonoBehaviour
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
         anim = GetComponent<Animator>();
 
+        /* Spawnaa HP_bar ja aseta siihen arvot. */
         GameObject hpAsChild = Instantiate(HP_enemy);
         healthBar =hpAsChild.GetComponentInChildren<Healthbar>();
-       
         healthBar.enemy = gameObject;
 
        

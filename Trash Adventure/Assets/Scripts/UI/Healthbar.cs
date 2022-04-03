@@ -21,7 +21,7 @@ public class Healthbar : MonoBehaviour
     [SerializeField]
     private Vector3 hoverOffset;
 
-    
+    bool follow = true;
 
 
     private void Awake()
@@ -37,13 +37,17 @@ public class Healthbar : MonoBehaviour
     {
         Debug.Log("I've been instantiated by: " + enemy);
 
+        if (enemy.layer == 3) //Player layer = 3, enemy =7
+        {
+            follow = false;
+        } ;
 
     }
 
     private void FixedUpdate()
     {
         //Voi olla null, jos on pelaajahahmo, + parempi että on 1 debug logi kuin 50 per s 
-        if(enemy != null) { 
+        if(follow) { 
         transform.position = enemy.transform.position + hoverOffset;
         }
     }

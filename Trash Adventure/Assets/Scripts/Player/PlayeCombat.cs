@@ -18,16 +18,22 @@ public class PlayeCombat : MonoBehaviour
     public Animator animator;
 
     [Header("Health + UI implementation")]
+
     [SerializeField]
     private int maxHealth = 100; //Pelaajalla on 100HP defaulttina
     int currentHealth;
-    [SerializeField, Tooltip("Mik‰ on kyseisen peliobjektin healthbar")]
-    private Healthbar healthBar;
+    [SerializeField]
+    private GameObject player_HP;
+    Healthbar healthBar;
 
     private void Start()
     {
         //TODO::
         //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptiss‰kin, toivoen ett‰ se korjaisi kaikki ongelmat koska en en‰‰ tii‰ miten muutenkaan saisin sit‰ kuntoon.
+        GameObject hpAsChild = Instantiate(player_HP);
+        healthBar = hpAsChild.GetComponentInChildren<Healthbar>();
+        healthBar.enemy = gameObject;
+
 
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);//UI
