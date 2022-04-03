@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.2816, y: 3.3193}
+  m_AnchoredPosition: {x: -2.2815857, y: 3.3193054}
   m_SizeDelta: {x: 1753.9656, y: 1004.7843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4969488872166544649
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4969488872166544655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,3 +384,4 @@ MonoBehaviour:
   fillImage: {fileID: 4969488872381302969}
   child: {fileID: 0}
   hoverOffset: {x: 0, y: 2, z: 0}
+  enemy: {fileID: 0}

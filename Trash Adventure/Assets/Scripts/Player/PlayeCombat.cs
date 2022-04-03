@@ -26,8 +26,10 @@ public class PlayeCombat : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        //TODO::
+        //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptiss‰kin, toivoen ett‰ se korjaisi kaikki ongelmat koska en en‰‰ tii‰ miten muutenkaan saisin sit‰ kuntoon.
 
+        currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);//UI
         healthBar = healthBar.GetComponent<Healthbar>();
         if (healthBar == null)
@@ -74,7 +76,6 @@ public class PlayeCombat : MonoBehaviour
 
 
         animator.SetTrigger("hurt");
-
         healthBar.setHealth(currentHealth);//UI
 
         if (currentHealth <= 0)

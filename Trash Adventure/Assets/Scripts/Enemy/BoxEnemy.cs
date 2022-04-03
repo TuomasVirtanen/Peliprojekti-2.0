@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoxEnemy : MonoBehaviour
 {
-    [SerializeField][Tooltip("Pelaajan collideri. Ei tehdä toiminnallisuutta, ellei se ole JUURI pelaajaan kohdistuva.")]
     private Collider2D playerCollider; //tarkistetaan, onko colliderin sisällä pelaaja. Jos on.. ->
 
     [Header ("Hyökkäykseen liittyvä liikkuminen")]
@@ -15,11 +14,13 @@ public class BoxEnemy : MonoBehaviour
     [SerializeField]
     [Tooltip("Missä kulmassa oikeallemenevä hyökkäys tulee?")]
     private Vector2 AttackPosition = Vector2.zero; //Init nollassa.
-    private Rigidbody2D rigidbody;
+
+    private new Rigidbody2D rigidbody;
 
 
     [Header ("Vihollisen asetukset")]
     private Animator animator; //Initalized in Awake
+    
 
     private void Awake()
     {
@@ -30,6 +31,10 @@ public class BoxEnemy : MonoBehaviour
     
         rigidbody = GetComponent<Rigidbody2D>();
         if (rigidbody == null) { Debug.Log("Boxenemyllä ei ole RB2D-komponenttia (Käytetään hyökkäykseen)"); }
+    
+        playerCollider = GameObject.Find("Player_female").GetComponent<Collider2D>();
+        if(playerCollider == null) { playerCollider = GameObject.Find("Player_male").GetComponent<Collider2D>(); }
+        if(playerCollider == null) { Debug.Log("Pelaajan collideria ei voity löytää."); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

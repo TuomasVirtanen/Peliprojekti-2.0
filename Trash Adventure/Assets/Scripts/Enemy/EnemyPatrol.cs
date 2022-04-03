@@ -34,7 +34,10 @@ public class EnemyPatrol : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(movingLeft)
+        //Tuhotaan tämä, jos itse vihollinen on kuollut. Muuten konsoli täyttyy paskalla.
+        if (enemy == null) { Destroy(gameObject); }
+
+        if (movingLeft)
         {
             if(enemy.position.x >= leftEdge.position.x)
             {
@@ -58,6 +61,8 @@ public class EnemyPatrol : MonoBehaviour
                 DirectionChange();
             }
         }
+
+       
     }
 
     private void MoveInDirection(int _direction)

@@ -107,7 +107,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   maxHealth: 100
-  healthBar: {fileID: 0}
+  HP_enemy: {fileID: 4969488872166544654, guid: 4580433a5ddc50844995c162102e4a43, type: 3}
   death: {fileID: 133676282936407318, guid: d755a07ee4f231b4c9abc95cb4070b4c, type: 3}
 --- !u!61 &4423933277707567186
 BoxCollider2D:

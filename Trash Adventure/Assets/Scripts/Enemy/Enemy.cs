@@ -28,8 +28,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
 
-    [SerializeField, Tooltip("Mikä on kyseisen peliobjektin healthbar")]
-    private Healthbar healthBar;
+    [SerializeField]
+    private GameObject HP_enemy;
+
+    //Mikä on kyseisen peliobjektin healthbar
+    Healthbar healthBar;
     [SerializeField, Tooltip("Kuolema_efekti")]
     private ParticleSystem death;
 
@@ -40,6 +43,13 @@ public class Enemy : MonoBehaviour
     {
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
         anim = GetComponent<Animator>();
+
+        GameObject hpAsChild = Instantiate(HP_enemy);
+        healthBar =hpAsChild.GetComponentInChildren<Healthbar>();
+       
+        healthBar.enemy = gameObject;
+
+       
 
         healthBar.setMaxHealth(maxHealth);//UI 
     }
