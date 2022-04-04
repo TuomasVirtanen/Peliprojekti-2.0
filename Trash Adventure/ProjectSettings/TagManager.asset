@@ -9,6 +9,8 @@ TagManager:
   - Metal
   - Bio
   - Spawnpoint
+  - Lid
+  - CoffeeMugTrash
   layers:
   - Default
   - TransparentFX

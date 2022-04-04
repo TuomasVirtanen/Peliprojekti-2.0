@@ -36,6 +36,13 @@ public class Enemy : MonoBehaviour
     [SerializeField, Tooltip("Kuolema_efekti")]
     private ParticleSystem death;
 
+    [Header("Dropping items")]
+    [SerializeField]
+    private GameObject trash1;
+    [SerializeField]
+    private GameObject trash2;
+    
+
     int currentHealth;
     RaycastHit2D hit;
 
@@ -111,6 +118,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        // Droppaa roska-itemit
+        Instantiate(trash1, transform.position, Quaternion.identity);
+        Instantiate(trash2, transform.position, Quaternion.identity);
+
         //Play dying animation
 
         //disable enemy
@@ -123,6 +134,10 @@ public class Enemy : MonoBehaviour
          GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         */
+
+        // Droppaa roska-itemit
+        Instantiate(trash1, transform.position, Quaternion.identity);
+        Instantiate(trash2, transform.position, Quaternion.identity);
 
         //add points
 

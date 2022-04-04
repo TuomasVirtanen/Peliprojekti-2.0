@@ -6,12 +6,12 @@ public class CardboardSorting : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Cardboard")
+        if(other.tag == "Cardboard" || other.tag == "CoffeeMugTrash")
         {
             Debug.Log("Correct");
             Destroy(other.gameObject);
         }
-        else if(other.tag != "Cardboard")
+        else
         {
             Debug.Log("Wrong bin");
             Destroy(other.gameObject);

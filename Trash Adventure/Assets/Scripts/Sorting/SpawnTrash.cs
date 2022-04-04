@@ -9,7 +9,10 @@ public class SpawnTrash : MonoBehaviour
 
     [SerializeField]
     private GameObject plastic;
-    private int plasticAmount = 1;
+    private int plasticAmount;
+
+    [SerializeField]
+    private GameObject lid;
 
     [SerializeField]
     private GameObject metal;
@@ -25,7 +28,7 @@ public class SpawnTrash : MonoBehaviour
 
     void Start()
     {
-        SpawnItem(plastic, plasticAmount);
+        //SpawnItem(lid, CollectableTrash.CollectedLids);
         SpawnItem(cardboard, cardboardAmount);
     }
 

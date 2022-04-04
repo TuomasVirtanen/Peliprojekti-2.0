@@ -6,12 +6,12 @@ public class PlasticSorting : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Plastic")
+        if(other.tag == "Plastic" || other.tag == "Lid")
         {
             Debug.Log("Correct");
             Destroy(other.gameObject);
         }
-        else if(other.tag != "Plastic")
+        else
         {
             Debug.Log("Wrong bin");
             Destroy(other.gameObject);
