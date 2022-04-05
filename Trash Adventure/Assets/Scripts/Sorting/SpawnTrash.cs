@@ -8,23 +8,12 @@ public class SpawnTrash : MonoBehaviour
     private GameObject spawnArea;
 
     [SerializeField]
-    private GameObject plastic;
-    private int plasticAmount;
-
-    [SerializeField]
     private GameObject lid;
-
-    [SerializeField]
-    private GameObject metal;
-    private int metalAmount;
 
     [SerializeField]
     private GameObject bio;
     private int bioAmount;
-
-    [SerializeField]
-    private GameObject cardboard;
-    private int cardboardAmount;
+    
     [SerializeField]
     private GameObject coffeeMugTrash;
 
