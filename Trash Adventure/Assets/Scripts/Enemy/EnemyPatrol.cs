@@ -29,7 +29,10 @@ public class EnemyPatrol : MonoBehaviour
 
     void OnDisable()
     {
-        anim.SetBool("moving", false);
+        if(anim != null)
+        {
+            anim.SetBool("moving", false);
+        }
     }
 
     void FixedUpdate()
