@@ -29,13 +29,16 @@ public class EnemyPatrol : MonoBehaviour
 
     void OnDisable()
     {
-        anim.SetBool("moving", false);
+        if(anim != null)
+        {
+            anim.SetBool("moving", false);
+        }
     }
 
     void FixedUpdate()
     {
         //Tuhotaan tämä, jos itse vihollinen on kuollut. Muuten konsoli täyttyy paskalla.
-        if (enemy == null) { Destroy(gameObject); }
+        if (enemy == null) { Destroy(gameObject); return;}
 
         if (movingLeft)
         {

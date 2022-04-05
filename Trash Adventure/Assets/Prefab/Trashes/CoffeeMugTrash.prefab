@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 218384764685151700}
   - component: {fileID: -4483132832504073873}
   - component: {fileID: -8101987817623494801}
+  - component: {fileID: 2157741389773579747}
+  - component: {fileID: -2937912474474205564}
   m_Layer: 0
   m_Name: CoffeeMugTrash
   m_TagString: CoffeeMugTrash
@@ -52,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122,3 +124,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d420b662f125ed4c951ca155fed40a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2157741389773579747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659068062607223654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88aa134540b44c8488f0d6b85e290f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &-2937912474474205564
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659068062607223654}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

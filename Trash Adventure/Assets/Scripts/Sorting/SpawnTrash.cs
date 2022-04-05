@@ -8,28 +8,19 @@ public class SpawnTrash : MonoBehaviour
     private GameObject spawnArea;
 
     [SerializeField]
-    private GameObject plastic;
-    private int plasticAmount;
-
-    [SerializeField]
     private GameObject lid;
-
-    [SerializeField]
-    private GameObject metal;
-    private int metalAmount;
 
     [SerializeField]
     private GameObject bio;
     private int bioAmount;
-
+    
     [SerializeField]
-    private GameObject cardboard;
-    private int cardboardAmount = 1;
+    private GameObject coffeeMugTrash;
 
     void Start()
     {
-        //SpawnItem(lid, CollectableTrash.CollectedLids);
-        SpawnItem(cardboard, cardboardAmount);
+        SpawnItem(lid, CollectableTrash.CollectedLids);
+        SpawnItem(coffeeMugTrash, CollectableTrash.CollectedCoffeeMugTrashes);
     }
 
     private void SpawnItem(GameObject trash, int trashAmount)
