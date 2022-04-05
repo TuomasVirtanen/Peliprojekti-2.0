@@ -12,7 +12,7 @@ public class PointSystem : MonoBehaviour
     int pointsCounter = 0;
     public int collectedPoints = 0;
 
-    public Text highscore = PlayerPrefs.GetInt("HighScore").ToString();
+    public Text highscore;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class PointSystem : MonoBehaviour
         Points.text = pointsCounter.ToString();
     }
 
-    public void AddPoints(int a)
+    public void addPoints(int a)
     {
         collectedPoints = collectedPoints + a;
     }
@@ -43,14 +43,13 @@ public class PointSystem : MonoBehaviour
     {
         if(pointsCounter > PlayerPrefs.GetInt("HighScore"))
         {
-            PlayerPrefs.SetInt("HighScore"pointsCounter);  
+            PlayerPrefs.SetInt("HighScore",pointsCounter);  
         }
+
+    }
     void GetHighScore()
     {
-        highscore = PlayerPrefs.GetInt("HighScore").ToString();
+        //highscore = PlayerPrefs.GetInt("HighScore").ToString();
     }
-
-
-
 
 }
