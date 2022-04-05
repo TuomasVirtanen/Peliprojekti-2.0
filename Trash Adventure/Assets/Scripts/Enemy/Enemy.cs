@@ -118,10 +118,6 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        // Droppaa roska-itemit
-        Instantiate(trash1, transform.position, Quaternion.identity);
-        Instantiate(trash2, transform.position, Quaternion.identity);
-
         //Play dying animation
 
         //disable enemy

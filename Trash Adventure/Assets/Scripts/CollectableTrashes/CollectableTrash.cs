@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CollectableTrash : MonoBehaviour
 {
-    public int CollectedLids {get; set;}
-    public int CollectedCoffeeMugTrashes {get; set;}
+    public static int CollectedLids {get; set;}
+    public static int CollectedCoffeeMugTrashes {get; set;}
     // jne...
     
     public void OnTriggerEnter2D(Collider2D other)

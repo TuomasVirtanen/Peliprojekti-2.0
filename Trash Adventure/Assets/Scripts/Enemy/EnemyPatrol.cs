@@ -35,7 +35,7 @@ public class EnemyPatrol : MonoBehaviour
     void FixedUpdate()
     {
         //Tuhotaan tämä, jos itse vihollinen on kuollut. Muuten konsoli täyttyy paskalla.
-        if (enemy == null) { Destroy(gameObject); }
+        if (enemy == null) { Destroy(gameObject); return;}
 
         if (movingLeft)
         {

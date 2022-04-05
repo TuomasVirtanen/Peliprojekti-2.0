@@ -24,12 +24,14 @@ public class SpawnTrash : MonoBehaviour
 
     [SerializeField]
     private GameObject cardboard;
-    private int cardboardAmount = 1;
+    private int cardboardAmount;
+    [SerializeField]
+    private GameObject coffeeMugTrash;
 
     void Start()
     {
-        //SpawnItem(lid, CollectableTrash.CollectedLids);
-        SpawnItem(cardboard, cardboardAmount);
+        SpawnItem(lid, CollectableTrash.CollectedLids);
+        SpawnItem(coffeeMugTrash, CollectableTrash.CollectedCoffeeMugTrashes);
     }
 
     private void SpawnItem(GameObject trash, int trashAmount)
