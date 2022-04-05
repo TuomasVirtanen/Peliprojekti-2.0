@@ -8,28 +8,49 @@ public class PointSystem : MonoBehaviour
     public static PointSystem instance;
 
     public Text Points;
-    int pointsCounter;
+    
+    int pointsCounter = 0;
+    public int collectedPoints = 0;
+
+    public Text highscore = PlayerPrefs.GetInt("HighScore").ToString();
 
     private void Awake()
     {
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        pointsCounter = 0;
-    }
-
     // Update is called once per frame
     void Update()
     {
         Points.text = pointsCounter.ToString();
-        
     }
 
-    public void addPoints(int a)
+    public void AddPoints(int a)
     {
-        pointsCounter = pointsCounter + a;
+        collectedPoints = collectedPoints + a;
     }
+
+    public void CountPoints(int a)
+    {
+        for(int i = 0; collectedPoints > i;collectedPoints--)
+        {
+            pointsCounter++;
+        } 
+        SetHighScore(); 
+    }
+
+    void SetHighScore()
+    {
+        if(pointsCounter > PlayerPrefs.GetInt("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore"pointsCounter);  
+        }
+    void GetHighScore()
+    {
+        highscore = PlayerPrefs.GetInt("HighScore").ToString();
+    }
+
+
+
+
 }
