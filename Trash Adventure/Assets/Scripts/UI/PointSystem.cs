@@ -22,21 +22,27 @@ public class PointSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Points.text = pointsCounter.ToString();
+        CountPoints();
+        Points.text = "Points: " + pointsCounter.ToString();
+        highscore.text = "Highscore: " + PlayerPrefs.GetInt("HighScore").ToString();
     }
 
+    
     public void addPoints(int a)
     {
         collectedPoints = collectedPoints + a;
     }
 
-    public void CountPoints(int a)
+    public void CountPoints()
     {
-        for(int i = 0; collectedPoints > i;collectedPoints--)
+        if(collectedPoints > 0)
         {
-            pointsCounter++;
-        } 
-        SetHighScore(); 
+            for(int i = 0; collectedPoints > i;collectedPoints--)
+            {
+                pointsCounter++;
+            } 
+            SetHighScore(); 
+        }
     }
 
     void SetHighScore()
@@ -49,7 +55,7 @@ public class PointSystem : MonoBehaviour
     }
     void GetHighScore()
     {
-        //highscore = PlayerPrefs.GetInt("HighScore").ToString();
+        
     }
 
 }
