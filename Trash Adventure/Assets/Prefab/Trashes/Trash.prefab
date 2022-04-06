@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1325042455386544974}
   - component: {fileID: 1325042455386544975}
   - component: {fileID: 1325042455386544960}
-  - component: {fileID: 1325042455386544961}
   - component: {fileID: 1325042455386544973}
+  - component: {fileID: -107618995947495680}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Cardboard
@@ -116,18 +116,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &1325042455386544961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325042455386544962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88aa134540b44c8488f0d6b85e290f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1325042455386544973
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +137,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-107618995947495680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325042455386544962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ca1076cd61bac4bb16ac5090be78b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

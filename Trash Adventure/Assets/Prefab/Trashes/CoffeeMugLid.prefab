@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1555846225581685279}
   - component: {fileID: 8030189688662807806}
   - component: {fileID: -9217597918085568343}
-  - component: {fileID: -8662281102385614008}
   - component: {fileID: 2445174145426206596}
+  - component: {fileID: 3185457882544825635}
   m_Layer: 0
   m_Name: CoffeeMugLid
   m_TagString: Lid
@@ -114,18 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d420b662f125ed4c951ca155fed40a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8662281102385614008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752310952908400325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88aa134540b44c8488f0d6b85e290f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2445174145426206596
 Rigidbody2D:
   serializedVersion: 4
@@ -147,3 +135,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3185457882544825635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752310952908400325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ca1076cd61bac4bb16ac5090be78b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
