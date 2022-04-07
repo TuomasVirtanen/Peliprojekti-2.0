@@ -173,9 +173,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.17472818}
+  m_Offset: {x: -0.25367895, y: 0.4417591}
   serializedVersion: 2
-  m_Radius: 1.88
+  m_Radius: 1.5195088
 --- !u!50 &7245785844416024314
 Rigidbody2D:
   serializedVersion: 4
@@ -234,3 +234,5 @@ MonoBehaviour:
   maxHealth: 40
   HP_enemy: {fileID: 4969488872166544654, guid: 4580433a5ddc50844995c162102e4a43, type: 3}
   death: {fileID: 133676282936407318, guid: d755a07ee4f231b4c9abc95cb4070b4c, type: 3}
+  trash1: {fileID: 8313529370332677919, guid: 31ec7b15a653090489f86d0b87bc282a, type: 3}
+  trash2: {fileID: 0}
