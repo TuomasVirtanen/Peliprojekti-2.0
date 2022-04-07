@@ -29,7 +29,7 @@ public class PlayeCombat : MonoBehaviour
     private void Start()
     {
         //TODO::
-        //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptissäkin, toivoen että se korjaisi kaikki ongelmat koska en enää tiiä miten muutenkaan saisin sitä kuntoon.
+        //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptissï¿½kin, toivoen ettï¿½ se korjaisi kaikki ongelmat koska en enï¿½ï¿½ tiiï¿½ miten muutenkaan saisin sitï¿½ kuntoon.
         GameObject hpAsChild = Instantiate(player_HP);
         healthBar = hpAsChild.GetComponentInChildren<Healthbar>();
         healthBar.enemy = gameObject;

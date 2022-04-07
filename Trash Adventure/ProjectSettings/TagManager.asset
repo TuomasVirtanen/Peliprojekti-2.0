@@ -11,6 +11,8 @@ TagManager:
   - Spawnpoint
   - Lid
   - CoffeeMugTrash
+  - PizzaSlice
+  - Meal
   layers:
   - Default
   - TransparentFX
