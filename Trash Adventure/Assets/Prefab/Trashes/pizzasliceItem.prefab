@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5449238180612981114}
   m_Layer: 0
   m_Name: pizzasliceItem
-  m_TagString: Bio
+  m_TagString: PizzaSlice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
