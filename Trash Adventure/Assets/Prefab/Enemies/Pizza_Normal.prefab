@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7245785844416024289}
   - component: {fileID: 7245785844416024315}
   - component: {fileID: 7245785844416024312}
-  - component: {fileID: 7245785844416024293}
   - component: {fileID: 7245785844416024314}
   - component: {fileID: 7245785844416024292}
   - component: {fileID: 7245785844416024313}
+  - component: {fileID: 6075052760402445604}
   m_Layer: 7
   m_Name: Pizza_Normal
   m_TagString: Untagged
@@ -160,22 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.15476742}
   m_EdgeRadius: 0
---- !u!58 &7245785844416024293
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7245785844416024288}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.25367895, y: 0.4417591}
-  serializedVersion: 2
-  m_Radius: 1.5195088
 --- !u!50 &7245785844416024314
 Rigidbody2D:
   serializedVersion: 4
@@ -236,3 +220,19 @@ MonoBehaviour:
   death: {fileID: 133676282936407318, guid: d755a07ee4f231b4c9abc95cb4070b4c, type: 3}
   trash1: {fileID: 8313529370332677919, guid: 31ec7b15a653090489f86d0b87bc282a, type: 3}
   trash2: {fileID: 0}
+--- !u!70 &6075052760402445604
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245785844416024288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.18}
+  m_Size: {x: 2.17, y: 0.96}
+  m_Direction: 1

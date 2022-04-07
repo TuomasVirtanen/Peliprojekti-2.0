@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1807635470569540551}
   - component: {fileID: 1807635470569540548}
   - component: {fileID: 1807635470569540549}
-  - component: {fileID: 1807635470569540554}
+  - component: {fileID: 944649831}
   m_Layer: 7
   m_Name: Plastic_Food
   m_TagString: Untagged
@@ -220,8 +220,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6982659, y: 0.18959677}
   m_EdgeRadius: 0
---- !u!58 &1807635470569540554
-CircleCollider2D:
+--- !u!70 &944649831
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -233,6 +233,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.73
+  m_Offset: {x: 0, y: -0.12}
+  m_Size: {x: 1.36, y: 0.56}
+  m_Direction: 1
