@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class PlayerMove : MonoBehaviour
     public float fallMultiplier; 
     public float lowJumpMultiplier;
     public Animator animator;
-    
+
+    public Joystick joystick;
+    public Button JumpButton;
+    public bool dojump = false;
+
     private bool FacingRight = true;
 
     Rigidbody2D rb;
@@ -29,6 +34,8 @@ public class PlayerMove : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
+        Button btn = JumpButton.GetComponent<Button>();
+        btn.onClick.AddListener(buttonJump);
     }
 
     // Update is called once per frame
@@ -44,7 +51,7 @@ public class PlayerMove : MonoBehaviour
     void Move()
     {
 
-    float x = Input.GetAxisRaw("Horizontal"); 
+    float x = joystick.Horizontal; 
     float moveBy = x * speed; 
     animator.SetFloat("speed", Mathf.Abs(moveBy));
     
@@ -84,12 +91,20 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
     }
+
+    void buttonJump()
+    {
+        dojump = true;
+    }
     // Jump animation condition
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+
+
+        if(dojump && isGrounded) {
             rb.velocity = new Vector2(rb.velocity.x, jump);
             CreateDust();
+            
         }
         if (rb.velocity.y > 0.01) {
             animator.SetBool("isJumping", true);
@@ -97,6 +112,7 @@ public class PlayerMove : MonoBehaviour
         else {
             animator.SetBool("isJumping", false);
         }
+        dojump = false;
     }
 
     void BetterJump() {

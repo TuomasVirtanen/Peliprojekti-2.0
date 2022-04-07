@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayeCombat : MonoBehaviour
 {
@@ -26,10 +27,17 @@ public class PlayeCombat : MonoBehaviour
     private GameObject player_HP;
     Healthbar healthBar;
 
+    public Button attackButton;
+    public bool doAttack = false;
+
     private void Start()
     {
+
+        Button btn = attackButton.GetComponent<Button>();
+        btn.onClick.AddListener(buttonAttack);
+
         //TODO::
-        //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptissäkin, toivoen että se korjaisi kaikki ongelmat koska en enää tiiä miten muutenkaan saisin sitä kuntoon.
+        //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptissï¿½kin, toivoen ettï¿½ se korjaisi kaikki ongelmat koska en enï¿½ï¿½ tiiï¿½ miten muutenkaan saisin sitï¿½ kuntoon.
         GameObject hpAsChild = Instantiate(player_HP);
         healthBar = hpAsChild.GetComponentInChildren<Healthbar>();
         healthBar.enemy = gameObject;
@@ -42,13 +50,15 @@ public class PlayeCombat : MonoBehaviour
         {
             Debug.Log("Enemy " + this.gameObject + " doesn't have the healthbar component added to it");
         }
+
+
     }
 
     void Update()
     {   
         if(Time.time >= nextAttackTime)
         {
-            if(Input.GetKeyDown(KeyCode.Tab))
+            if(doAttack)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
@@ -99,5 +109,10 @@ public class PlayeCombat : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
+    }
+
+    void buttonAttack()
+    {
+        doAttack = true;
     }
 }
