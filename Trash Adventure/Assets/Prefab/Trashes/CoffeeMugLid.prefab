@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3185457882544825635}
   m_Layer: 0
   m_Name: CoffeeMugLid
-  m_TagString: Lid
+  m_TagString: Plastic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

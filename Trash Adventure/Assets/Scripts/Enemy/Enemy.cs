@@ -133,7 +133,7 @@ public class Enemy : MonoBehaviour
 
         // Droppaa roska-itemit
         //Lisäsin roskien droppaukseen pientä randomia t aaro :)
-        Instantiate(trash1, transform.position + new Vector3(Random.Range(0.4f, 0.8f), Random.Range(0.1f, 0.4f)), Quaternion.identity);
+        Instantiate(trash1, transform.position + new Vector3(Random.Range(0.4f, 1f), Random.Range(0.2f, 0.4f)), Quaternion.identity);
         Instantiate(trash2, transform.position, Quaternion.identity);
 
         //add points
