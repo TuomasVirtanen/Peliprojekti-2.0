@@ -206,7 +206,7 @@ Transform:
   m_LocalScale: {x: 6.2208, y: 6.2208, z: 6.2208}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &462379495
 MonoBehaviour:
@@ -478,7 +478,50 @@ Transform:
   m_LocalScale: {x: 14.321, y: 1.5421716, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1101273367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101273369}
+  - component: {fileID: 1101273368}
+  m_Layer: 0
+  m_Name: DragController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1101273368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101273367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88aa134540b44c8488f0d6b85e290f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1101273369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101273367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.1697044, y: -0.009533025, z: -24.907602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1184917240
 GameObject:
@@ -544,7 +587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358802462
 GameObject:
@@ -629,7 +672,7 @@ Transform:
   m_LocalScale: {x: 6.2208, y: 6.2208, z: 6.2208}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1358802465
 MonoBehaviour:
@@ -773,7 +816,7 @@ Transform:
   m_LocalScale: {x: 6.2208, y: 6.2208, z: 6.2208}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1772484778
 MonoBehaviour:
@@ -917,7 +960,7 @@ Transform:
   m_LocalScale: {x: 6.2208, y: 6.2208, z: 6.2208}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1971222602
 MonoBehaviour:
@@ -1008,11 +1051,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 780759498}
-  plastic: {fileID: 5642126695151707638, guid: 16f4ff07ef8080b47a13688acb2f444e, type: 3}
   lid: {fileID: 7752310952908400325, guid: 394a4025b1720d34d885b03e0a97c809, type: 3}
-  metal: {fileID: 0}
   bio: {fileID: 0}
-  cardboard: {fileID: 5231642911835653960, guid: 44cb1b0a84a770d409f05696c6c56cda, type: 3}
   coffeeMugTrash: {fileID: 1659068062607223654, guid: 2ce55504bc68a8543b24e683f4a9ee00, type: 3}
 --- !u!4 &2125916802
 Transform:
@@ -1026,5 +1066,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
