@@ -111,7 +111,7 @@ public class PlayeCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
     }
 
-    void buttonAttack()
+    public void buttonAttack()
     {
         doAttack = true;
     }

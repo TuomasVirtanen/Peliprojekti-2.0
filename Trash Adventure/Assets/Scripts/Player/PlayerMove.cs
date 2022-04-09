@@ -12,11 +12,8 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public float jump;
 
-    bool isFalling = false;
-    bool isJumping = false;
     bool isGrounded = false; 
     public Transform isGroundedChecker; 
-    public float checkGroundRadius; 
     public LayerMask groundLayer;
     public float fallMultiplier; 
     public float lowJumpMultiplier;
@@ -25,6 +22,7 @@ public class PlayerMove : MonoBehaviour
     public Joystick joystick;
     public Button JumpButton;
     public bool dojump = false;
+    private BoxCollider2D boxCollider2d;
 
     private bool FacingRight = true;
 
@@ -32,10 +30,10 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         Button btn = JumpButton.GetComponent<Button>();
         btn.onClick.AddListener(buttonJump);
+        boxCollider2d = transform.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -50,7 +48,6 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-
     float x = joystick.Horizontal; 
     float moveBy = x * speed; 
     animator.SetFloat("speed", Mathf.Abs(moveBy));
@@ -84,7 +81,7 @@ public class PlayerMove : MonoBehaviour
     //Fall animation condition
     void Fall()
     {
-        if (rb.velocity.y < -0.01) {
+        if (rb.velocity.y < -0.01 && !isGrounded) {
             animator.SetBool("isFalling", true);
         }
         else {
@@ -92,10 +89,11 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void buttonJump()
+    public void buttonJump()
     {
         dojump = true;
     }
+    
     // Jump animation condition
     void Jump()
     {
@@ -104,14 +102,15 @@ public class PlayerMove : MonoBehaviour
         if(dojump && isGrounded) {
             rb.velocity = new Vector2(rb.velocity.x, jump);
             CreateDust();
-            
         }
-        if (rb.velocity.y > 0.01) {
+
+        if (rb.velocity.y > 0.01 && !isGrounded) {
             animator.SetBool("isJumping", true);
         }
         else {
             animator.SetBool("isJumping", false);
         }
+
         dojump = false;
     }
 
@@ -123,9 +122,10 @@ public class PlayerMove : MonoBehaviour
         }  
     }
     //Checks if player is touching ground
-    void CheckIfGrounded() { 
-        Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer); 
-        if (collider != null) { 
+    void CheckIfGrounded() {
+        float extraHeight = 0.5f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeight, groundLayer);
+        if (raycastHit.collider != null) { 
             isGrounded = true;
         } else { 
             isGrounded = false;

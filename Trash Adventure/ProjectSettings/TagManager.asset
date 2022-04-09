@@ -13,6 +13,7 @@ TagManager:
   - CoffeeMugTrash
   - PizzaSlice
   - Meal
+  - Teleporter
   layers:
   - Default
   - TransparentFX
