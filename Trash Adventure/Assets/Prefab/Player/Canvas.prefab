@@ -1,5 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &271187385067450921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6813427249789773737, guid: 983c98ab7fde51046ab6c492ac41fcb5, type: 3}
+  m_PrefabInstance: {fileID: 8080100214381201089}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3363185796551041385}
+  m_Layer: 0
+  m_Name: 'JumpButton (Missing Prefab with guid: 983c98ab7fde51046ab6c492ac41fcb5)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3363185796551041385
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6813427249789773736, guid: 983c98ab7fde51046ab6c492ac41fcb5, type: 3}
+  m_PrefabInstance: {fileID: 8080100214381201089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271187385067450921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3363185797146814264}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1526229534270551103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1060077181103092726, guid: 649ee8a8af8c33a4a905824739953942, type: 3}
+  m_PrefabInstance: {fileID: 2313241888352188088}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3363185796280255823}
+  m_Layer: 0
+  m_Name: 'AttackButton (Missing Prefab with guid: 649ee8a8af8c33a4a905824739953942)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3363185796280255823
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1060077181103092727, guid: 649ee8a8af8c33a4a905824739953942, type: 3}
+  m_PrefabInstance: {fileID: 2313241888352188088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526229534270551103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3363185797146814264}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3363185795910071061
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,7 +104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 652.5, y: 327}
+  m_AnchoredPosition: {x: 513.94995, y: 254.99997}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3363185795910071048
@@ -114,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 652.50006, y: 356.99997}
+  m_AnchoredPosition: {x: 513.95, y: 285}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3363185796836533544
@@ -379,11 +449,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649ee8a8af8c33a4a905824739953942, type: 3}
---- !u!224 &3363185796280255823 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1060077181103092727, guid: 649ee8a8af8c33a4a905824739953942, type: 3}
-  m_PrefabInstance: {fileID: 2313241888352188088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3363185797431272032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,8 +660,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983c98ab7fde51046ab6c492ac41fcb5, type: 3}
---- !u!224 &3363185796551041385 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6813427249789773736, guid: 983c98ab7fde51046ab6c492ac41fcb5, type: 3}
-  m_PrefabInstance: {fileID: 8080100214381201089}
-  m_PrefabAsset: {fileID: 0}

@@ -78,6 +78,8 @@ public class PlayeCombat : MonoBehaviour
             
         }
 
+        doAttack = false;
+
     }
 
     void EndAttackAnim()
