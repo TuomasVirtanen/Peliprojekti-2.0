@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
+  
+
     [Header ("Patrol Points")]
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
@@ -12,6 +14,7 @@ public class EnemyPatrol : MonoBehaviour
     [Header ("Enemy")]
     [SerializeField] private Transform enemy;
     [SerializeField] private Animator anim;
+    private GameObject coffeegameobject;
 
     [Header ("Movement parameters")]
     [SerializeField] private float speed;
@@ -25,6 +28,14 @@ public class EnemyPatrol : MonoBehaviour
     void Awake()
     {
         initScale = enemy.localScale;
+        /*
+          coffeegameobject = GameObject.Find ("CoffeMugEnemy");
+        enemy=coffeegameobject.GetComponent<Transform>();
+        anim = coffeegameobject.GetComponent<Animator>();
+        Debug.Log("ADADADA "+coffeegameobject);
+         */
+        //enemy ja anim pitää hakea awakessa jos haluis sillee helposti drag & drop
+
     }
 
     void OnDisable()
@@ -38,7 +49,7 @@ public class EnemyPatrol : MonoBehaviour
     void FixedUpdate()
     {
         //Tuhotaan tämä, jos itse vihollinen on kuollut. Muuten konsoli täyttyy paskalla.
-        if (enemy == null) { Destroy(gameObject); return;}
+        if (enemy == null) {Destroy(gameObject); return;}
 
         if (movingLeft)
         {

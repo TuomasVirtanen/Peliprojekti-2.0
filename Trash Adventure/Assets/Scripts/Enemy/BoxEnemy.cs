@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoxEnemy : MonoBehaviour
 {
+    private GameObject player;
+
     private Collider2D playerCollider; //tarkistetaan, onko colliderin sisällä pelaaja. Jos on.. ->
 
     [Header ("Hyökkäykseen liittyvä liikkuminen")]
@@ -22,9 +24,10 @@ public class BoxEnemy : MonoBehaviour
     private Animator animator; //Initalized in Awake
     
 
-    private void Awake()
+     void Start()
     {
-        if(playerCollider == null) { Debug.Log("BoxEnemyllä ei ole pelaajacollideria liitetty"); }
+       
+       
 
         animator = GetComponent<Animator>();
         if(animator == null) { Debug.Log("BoxEnemyllä ei ole animaattoria"); }
@@ -32,14 +35,18 @@ public class BoxEnemy : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         if (rigidbody == null) { Debug.Log("Boxenemyllä ei ole RB2D-komponenttia (Käytetään hyökkäykseen)"); }
     
-        playerCollider = GameObject.Find("Player_female").GetComponent<Collider2D>();
-        if(playerCollider == null) { playerCollider = GameObject.Find("Player_male").GetComponent<Collider2D>(); }
-        if(playerCollider == null) { Debug.Log("Pelaajan collideria ei voity löytää."); }
+        
+    }
+    private void FixedUpdate()
+    {
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision == playerCollider) //Jos ympyrään astuu sisälle pelaaja, ->
+        if (player == null) { player = GameObject.FindWithTag("Player");playerCollider = player.GetComponent<Collider2D>();  }
+
+        if (collision == playerCollider) //Jos ympyrään astuu sisälle pelaaja, ->
         {
             Vector3 currentScale = transform.localScale;
             //Tarkistetaan, onko pelaaja oikealla vai vasemmalla
@@ -72,6 +79,6 @@ public class BoxEnemy : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         
-        animator.SetBool("moving", false);
+        //animator.SetBool("moving", false);
     }
 }

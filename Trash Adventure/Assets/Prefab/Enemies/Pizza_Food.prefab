@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2fcc3c17e62464a8f5eb3636fe1885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  male: {fileID: 7279967814956740938, guid: 4d9820ede54ac44d18a173d7395cbacb, type: 3}
+  female: {fileID: 2664115991521068070, guid: 9033c551b1b15e04c86963246a1e0060, type: 3}
   thrust: 1
   AttackPosition: {x: 2, y: 4}
 --- !u!114 &1326139428329351487
@@ -182,7 +184,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.06, y: -0.24}
-  m_Size: {x: 2.13, y: 1.01}
+  m_Size: {x: 2.24, y: 1.01}
   m_Direction: 1
 --- !u!61 &1326139428329351473
 BoxCollider2D:
