@@ -141,8 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2fcc3c17e62464a8f5eb3636fe1885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  male: {fileID: 7279967814956740938, guid: 4d9820ede54ac44d18a173d7395cbacb, type: 3}
-  female: {fileID: 2664115991521068070, guid: 9033c551b1b15e04c86963246a1e0060, type: 3}
   thrust: 1
   AttackPosition: {x: 2, y: 4}
 --- !u!114 &1326139428329351487
@@ -160,7 +158,7 @@ MonoBehaviour:
   attackCooldown: 2
   range: 0.45
   rangeColliderDistance: -0.64
-  damage: 20
+  damage: 10
   boxCollider: {fileID: 1326139428329351473}
   playerLayer:
     serializedVersion: 2
