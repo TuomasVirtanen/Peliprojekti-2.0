@@ -35,7 +35,7 @@ public class Healthbar : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log("I've been instantiated by: " + enemy);
+        
 
         if (enemy.layer == 3) //Player layer = 3, enemy =7
         {

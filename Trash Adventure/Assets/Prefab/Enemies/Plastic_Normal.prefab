@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 2
-  AttackPosition: {x: 6, y: 2}
+  AttackPosition: {x: 3, y: 2}
 --- !u!114 &4045201787095296432
 MonoBehaviour:
   m_ObjectHideFlags: 0

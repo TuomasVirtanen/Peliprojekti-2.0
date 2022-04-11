@@ -5991,7 +5991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 1341843161572289265}
   speed: 5
-  jump: 14
+  jump: 16
   isGroundedChecker: {fileID: 5877480921582876471}
   groundLayer:
     serializedVersion: 2

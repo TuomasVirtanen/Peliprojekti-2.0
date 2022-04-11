@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrust: 2
-  AttackPosition: {x: 2, y: 4}
+  AttackPosition: {x: 6, y: 2}
 --- !u!61 &1807635470569540548
 BoxCollider2D:
   m_ObjectHideFlags: 0
