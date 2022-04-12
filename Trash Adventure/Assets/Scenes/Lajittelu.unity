@@ -352,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701af4fdf2948ed489d8c2ca37ace572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oikea: {fileID: 2832439021010845785, guid: 1da90335a4fbe9043b7c65f2b09ab2a5, type: 3}
+  wrong: {fileID: 8155273799950822185, guid: e96676b05d6f59c45a177a7ba28a2362, type: 3}
 --- !u!61 &462379496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1524,6 +1526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4038e7561c18f884783841c3cd490212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oikea: {fileID: 2832439021010845785, guid: 1da90335a4fbe9043b7c65f2b09ab2a5, type: 3}
+  wrong: {fileID: 8155273799950822185, guid: e96676b05d6f59c45a177a7ba28a2362, type: 3}
 --- !u!61 &1358802466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1868,6 +1872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58cbb44a193f40f4bb00851d9b303edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oikea: {fileID: 2832439021010845785, guid: 1da90335a4fbe9043b7c65f2b09ab2a5, type: 3}
+  wrong: {fileID: 8155273799950822185, guid: e96676b05d6f59c45a177a7ba28a2362, type: 3}
 --- !u!61 &1772484779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2013,6 +2019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oikea: {fileID: 2832439021010845785, guid: 1da90335a4fbe9043b7c65f2b09ab2a5, type: 3}
+  wrong: {fileID: 8155273799950822185, guid: e96676b05d6f59c45a177a7ba28a2362, type: 3}
 --- !u!61 &1971222603
 BoxCollider2D:
   m_ObjectHideFlags: 0
