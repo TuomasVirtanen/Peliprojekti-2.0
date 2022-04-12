@@ -436,7 +436,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2012,6 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bddae60e385b5914d8e9f77cd45e5abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oikea: {fileID: 2832439021010845785, guid: 1da90335a4fbe9043b7c65f2b09ab2a5, type: 3}
 --- !u!61 &1971222603
 BoxCollider2D:
   m_ObjectHideFlags: 0
