@@ -2121,8 +2121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 780759498}
+  plastic: {fileID: 5630864215039784698, guid: 8ca28d1d5828a344ea1aaf777fc93cd6, type: 3}
   lid: {fileID: 7752310952908400325, guid: 394a4025b1720d34d885b03e0a97c809, type: 3}
-  bio: {fileID: 0}
+  pizzaSlice: {fileID: 5449238180612981119, guid: 0f11b533c22a04644b5bbde964e27928, type: 3}
+  meal: {fileID: 5244044266974195445, guid: 855b9e4348abaff4baf4b0294121bce0, type: 3}
+  cardboard: {fileID: 8313529370332677919, guid: 31ec7b15a653090489f86d0b87bc282a, type: 3}
   coffeeMugTrash: {fileID: 1659068062607223654, guid: 2ce55504bc68a8543b24e683f4a9ee00, type: 3}
 --- !u!4 &2125916802
 Transform:
