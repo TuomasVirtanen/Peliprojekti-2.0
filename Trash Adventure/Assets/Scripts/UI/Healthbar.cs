@@ -19,7 +19,7 @@ public class Healthbar : MonoBehaviour
    
     public GameObject enemy;
     [SerializeField]
-    private Vector3 hoverOffset;
+    private Vector3 hoverOffset; //Set as box offset by default
 
     bool follow = true;
 
@@ -35,19 +35,21 @@ public class Healthbar : MonoBehaviour
     }
     private void Start()
     {
-        
-
         if (enemy.layer == 3) //Player layer = 3, enemy =7
         {
             follow = false;
         } ;
 
+        if (enemy.name == "CoffeMugEnemy") { hoverOffset = new Vector3(0, 2.5f, 0); }
     }
 
     private void FixedUpdate()
     {
         //Voi olla null, jos on pelaajahahmo, + parempi että on 1 debug logi kuin 50 per s 
         if(follow) { 
+         
+       
+
         transform.position = enemy.transform.position + hoverOffset;
         }
     }

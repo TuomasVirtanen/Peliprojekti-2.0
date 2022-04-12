@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
     [Header("Healthbar")]
     [SerializeField]
     private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
+    [SerializeField]
+    private Vector3 HPOffset;
 
     [SerializeField]
     private GameObject HP_enemy;
@@ -41,6 +43,7 @@ public class Enemy : MonoBehaviour
     private GameObject trash1;
     [SerializeField]
     private GameObject trash2;
+    private bool isdead = false;
     
 
     int currentHealth;
@@ -52,7 +55,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
 
         /* Spawnaa HP_bar ja aseta siihen arvot. */
-        GameObject hpAsChild = Instantiate(HP_enemy);
+        GameObject hpAsChild = Instantiate(HP_enemy, transform.position + HPOffset, Quaternion.identity);
         healthBar =hpAsChild.GetComponentInChildren<Healthbar>();
         healthBar.enemy = gameObject;
 
@@ -118,27 +121,37 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        //Korjaa roskan 2x spawnauksen
+        if (!isdead) {
+            Instantiate(death, transform.position, Quaternion.identity); //Particles
+            Debug.Log("Enemy died");
+            Destroy(gameObject);//Tuhoaa peliobjektin
+            
+
+           
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+           
+
+            // Droppaa roska-itemit
+            //Lisäsin roskien droppaukseen pientä randomia t aaro :)
+            Instantiate(trash1, transform.position + new Vector3(Random.Range(0.7f, 1f), Random.Range(0.2f, 0.4f)), Quaternion.identity);
+            Instantiate(trash2, transform.position, Quaternion.identity);
+
+            PointSystem.instance.addPoints(100);
+
+            isdead = true;
+
+        }
         //Play dying animation
 
         //disable enemy
         
-        Instantiate(death,transform.position, Quaternion.identity);
-        Debug.Log("Enemy died");
-        Destroy(gameObject);//Tuhoaa peliobjektin
-
-        /*
-         GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-        */
-
-        // Droppaa roska-itemit
-        //Lisäsin roskien droppaukseen pientä randomia t aaro :)
-        Instantiate(trash1, transform.position + new Vector3(Random.Range(0.7f, 1f), Random.Range(0.2f, 0.4f)), Quaternion.identity);
-        Instantiate(trash2, transform.position, Quaternion.identity);
+        
 
         //add points
 
-        PointSystem.instance.addPoints(100);
+       
     }
 
     public bool PlayerInSight()

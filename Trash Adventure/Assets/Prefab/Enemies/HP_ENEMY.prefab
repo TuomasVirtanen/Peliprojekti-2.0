@@ -157,7 +157,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4969488872166544655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,4 +383,4 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   fillImage: {fileID: 4969488872381302969}
   enemy: {fileID: 0}
-  hoverOffset: {x: 0, y: 2.85, z: 0}
+  hoverOffset: {x: 0, y: 1, z: 0}
