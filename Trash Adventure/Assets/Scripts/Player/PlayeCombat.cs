@@ -14,7 +14,7 @@ public class PlayeCombat : MonoBehaviour
     public float attackRange = 1;
     public int attackDamage = 20; 
     public float attackRate = 2f;
-    float nextAttackTime = 0f;
+    public float nextAttackTime = 0f;
 
     public Animator animator;
 
@@ -68,6 +68,7 @@ public class PlayeCombat : MonoBehaviour
 
     void Attack()
     {
+        doAttack = false;
         animator.SetBool("isAttacking", true);
         //detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
@@ -78,7 +79,7 @@ public class PlayeCombat : MonoBehaviour
             
         }
 
-        doAttack = false;
+        
 
     }
 

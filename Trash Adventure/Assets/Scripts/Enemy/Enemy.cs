@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float rangeColliderDistance;
     [SerializeField] private int damage;
 
+
     [Header ("Collider")]
     [SerializeField] private BoxCollider2D boxCollider;
 
@@ -45,6 +46,8 @@ public class Enemy : MonoBehaviour
     private GameObject trash2;
     private bool isdead = false;
     
+    float damageRate = 2f;
+    float nextDamage = 0f;
 
     int currentHealth;
     RaycastHit2D hit;
@@ -82,7 +85,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        if(Time.time >= nextDamage)
+        {
+            currentHealth -= damage;
+            nextDamage = Time.time + 1f / damageRate;
+        }
         Debug.Log("took damage" + currentHealth);
         anim.SetTrigger("hurt");
 
