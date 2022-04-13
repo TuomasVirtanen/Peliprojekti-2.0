@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/tutorial.unity
     guid: ba247ec932a624d07b41346df3552b05
   - enabled: 1
+    path: Assets/Scenes/Lajittelu-tutoriaali.unity
+    guid: 53bc3f20d552ddc4488a4d4f39321a44
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
