@@ -20,32 +20,43 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    // Pause menussa:
+    public void Continue()
+    {
+        SceneManager.UnloadSceneAsync("PauseMenu");
+        Time.timeScale = 1;
+    }
+
     // Tason valinta
     public void Tutorial()
     {
         SceneManager.LoadScene("tutorial");
+        Time.timeScale = 1;
     }
     public void LevelOne()
     {
         SceneManager.LoadScene("level 1");
+        Time.timeScale = 1;
     }
     public void LevelTwo()
     {
         SceneManager.LoadScene("level 2");
-    }
-    public void GoBack()
-    {
-        SceneManager.UnloadSceneAsync("LevelSelection");
+        Time.timeScale = 1;
     }
 
     // Yleiset
     public void LevelSelection()
     {
-        SceneManager.LoadSceneAsync("LevelSelection", LoadSceneMode.Additive);
+        SceneManager.LoadScene("LevelSelection");
     }
     public void GoMainMenu()
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadSceneAsync("PauseMenu", LoadSceneMode.Additive);
     }
 }
