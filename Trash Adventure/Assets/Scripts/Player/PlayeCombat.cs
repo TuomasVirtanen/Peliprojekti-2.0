@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayeCombat : MonoBehaviour
 {
@@ -100,6 +101,9 @@ public class PlayeCombat : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("PLAYER HAS DIED.");
+            // Game over scene
+            Time.timeScale = 0;
+            SceneManager.LoadSceneAsync("GameOverMenu", LoadSceneMode.Additive);
         }
     }
 
