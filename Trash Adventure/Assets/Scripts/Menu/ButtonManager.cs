@@ -20,6 +20,12 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    // Levelin loppu-menussa
+    public void NextLevel()
+    {
+        
+    }
+
     // Pause menussa:
     public void Continue()
     {
