@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Healthbar")]
     [SerializeField]
-    private int maxHealth = 100; //Kyseisen vihollisen maksimi HP
+    public int maxHealth = 100; //Kyseisen vihollisen maksimi HP
     [SerializeField]
     private Vector3 HPOffset;
 
@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         //Korjaa roskan 2x spawnauksen
         if (!isdead) {
