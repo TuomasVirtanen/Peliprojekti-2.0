@@ -41,6 +41,7 @@ public class Healthbar : MonoBehaviour
         } ;
 
         if (enemy.name == "CoffeMugEnemy") { hoverOffset = new Vector3(0, 2.5f, 0); }
+        if (enemy.name == "MetalEnemy" || enemy.name == "MetalEnemy_Normal") { hoverOffset = new Vector3(0, -900f, 0); }
     }
 
     private void FixedUpdate()
