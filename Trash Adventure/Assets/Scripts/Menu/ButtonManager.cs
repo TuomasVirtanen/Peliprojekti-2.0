@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject GameOverSetActive;
+
     // Main menussa:
     public void QuitGame()
     {
@@ -15,7 +17,7 @@ public class ButtonManager : MonoBehaviour
     // Game over menussa:
     public void TryAgain()
     {
-        SceneManager.UnloadSceneAsync("GameOverMenu");
+        GameOverSetActive.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
