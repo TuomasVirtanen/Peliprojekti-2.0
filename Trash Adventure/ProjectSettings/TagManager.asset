@@ -16,6 +16,8 @@ TagManager:
   - Teleporter
   - OutOfBounds
   - Teleporter2
+  - DarkAreaEnter
+  - DarkAreaExit
   layers:
   - Default
   - TransparentFX

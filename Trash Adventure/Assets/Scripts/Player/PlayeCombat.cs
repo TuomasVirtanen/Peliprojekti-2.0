@@ -71,6 +71,7 @@ public class PlayeCombat : MonoBehaviour
     {
         doAttack = false;
         animator.SetBool("isAttacking", true);
+        SoundManagerScript.PlaySound("hit");
         //detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 

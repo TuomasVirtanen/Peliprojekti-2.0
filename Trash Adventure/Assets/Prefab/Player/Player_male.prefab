@@ -5322,7 +5322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3439550907863909509
 Transform:
   m_ObjectHideFlags: 0
@@ -6032,6 +6032,7 @@ GameObject:
   - component: {fileID: 2506883470318762695}
   - component: {fileID: 4337062076502752364}
   - component: {fileID: 234554785979812534}
+  - component: {fileID: 5499292377926970069}
   - component: {fileID: 5934333236206907350}
   - component: {fileID: -4428616448085580911}
   m_Layer: 3
@@ -6210,6 +6211,19 @@ MonoBehaviour:
   player_HP: {fileID: 7920807471709440086, guid: 7ee75361d51045e4ca3cfeb2a1953d13, type: 3}
   attackButton: {fileID: 1624343668741993499}
   doAttack: 0
+--- !u!114 &5499292377926970069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279967814956740938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31bef7e8a425014186f3f489a90d841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerGlowSetActive: {fileID: 2473595852457231049}
 --- !u!95 &5934333236206907350
 Animator:
   serializedVersion: 3

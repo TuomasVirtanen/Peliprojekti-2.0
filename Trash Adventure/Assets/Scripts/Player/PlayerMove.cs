@@ -55,14 +55,16 @@ public class PlayerMove : MonoBehaviour
         if (joystick.Horizontal >= .2f)
         {
             moveBy = speed;
+            SoundManagerScript.PlaySound("run");
         } else if (joystick.Horizontal <= -.2f)
         {
             moveBy = -speed;
+            SoundManagerScript.PlaySound("run");
         } else
         {
             moveBy = 0;
         }
-        //float moveBy = x * speed; 
+        //float moveBy = - or + speed; 
     
         rb.velocity = new Vector2(moveBy, rb.velocity.y); 
 
@@ -117,6 +119,7 @@ public class PlayerMove : MonoBehaviour
             jumpTimer -= Time.deltaTime;
             if (dojump && !isJumping)
             {
+                SoundManagerScript.PlaySound("jump");
                 rb.velocity = new Vector2(rb.velocity.x, jump);
                 isJumping = true;
                 Invoke("resetIsJumping", 0.5f);

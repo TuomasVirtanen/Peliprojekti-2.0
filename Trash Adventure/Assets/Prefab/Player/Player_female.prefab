@@ -270,7 +270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1930787761402171066
 Transform:
   m_ObjectHideFlags: 0
@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 2790326049060939242}
   - component: {fileID: 1292812144755730883}
   - component: {fileID: -4915331619878429562}
+  - component: {fileID: 935149036268248563}
   m_Layer: 3
   m_Name: Player_female
   m_TagString: Player
@@ -786,6 +787,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d041d5c80e9a654ab211c06e4ef76bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &935149036268248563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664115991521068070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31bef7e8a425014186f3f489a90d841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerGlowSetActive: {fileID: 1110298055465782156}
 --- !u!1 &3053103454702685714
 GameObject:
   m_ObjectHideFlags: 0
