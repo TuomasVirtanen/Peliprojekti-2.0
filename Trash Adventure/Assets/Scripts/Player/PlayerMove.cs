@@ -11,6 +11,9 @@ public class PlayerMove : MonoBehaviour
     //Change to private after last number has been decided.
     public float speed;
     public float jump;
+    public float jumpExtended = 0.1f;
+    float jumpTimer = 0;
+    private bool isJumping;
 
     bool isGrounded = false; 
     public Transform isGroundedChecker; 
@@ -18,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     public float fallMultiplier; 
     public float lowJumpMultiplier;
     public Animator animator;
+    float moveBy = 0f;
 
     public Joystick joystick;
     public Button JumpButton;
@@ -48,35 +52,40 @@ public class PlayerMove : MonoBehaviour
 
     void Move()
     {
-    float x = joystick.Horizontal; 
-    float moveBy = x * speed; 
-    animator.SetFloat("speed", Mathf.Abs(moveBy));
+        if (joystick.Horizontal >= .2f)
+        {
+            moveBy = speed;
+        } else if (joystick.Horizontal <= -.2f)
+        {
+            moveBy = -speed;
+        } else
+        {
+            moveBy = 0;
+        }
+        //float moveBy = x * speed; 
     
-    rb.velocity = new Vector2(moveBy, rb.velocity.y); 
+        rb.velocity = new Vector2(moveBy, rb.velocity.y); 
 
-    // If the input is moving the player right and the player is facing left -> flip the player
-	if (moveBy > 0 && !FacingRight)
-	{
+        // If the input is moving the player right and the player is facing left -> flip the player
+	    if (moveBy > 0 && !FacingRight)
+	    {
+		    // Switch the way the player is labelled as facing.
+		    FacingRight = !FacingRight;
 
-		// Switch the way the player is labelled as facing.
-		FacingRight = !FacingRight;
+		    // Multiply the player's x local scale by -1.
+		    Vector3 theScale = transform.localScale;
+		    theScale.x *= -1;
+		    transform.localScale = theScale;
+        }
+	    else if (moveBy < 0 && FacingRight)
+	    {
+		    FacingRight = !FacingRight;
 
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
-	else if (moveBy < 0 && FacingRight)
-	{
-
-		FacingRight = !FacingRight;
-
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
-	}
-    
-
+		    Vector3 theScale = transform.localScale;
+		    theScale.x *= -1;
+		    transform.localScale = theScale;
+	    }
+        animator.SetFloat("speed", Mathf.Abs(moveBy));
     }
     //Fall animation condition
     void Fall()
@@ -98,19 +107,31 @@ public class PlayerMove : MonoBehaviour
     void Jump()
     {
 
-
-        if(dojump && isGrounded) {
-            rb.velocity = new Vector2(rb.velocity.x, jump);
-            CreateDust();
+        if (isGrounded)
+        {
+            jumpTimer = jumpExtended;
         }
 
-        if (rb.velocity.y > 0.01 && !isGrounded) {
+        if (jumpTimer > 0)
+        {
+            jumpTimer -= Time.deltaTime;
+            if (dojump && !isJumping)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jump);
+                isJumping = true;
+                Invoke("resetIsJumping", 1f);
+                CreateDust();
+            }
+        }
+
+        if (rb.velocity.y > 0.01 && !isGrounded)
+        {
             animator.SetBool("isJumping", true);
         }
-        else {
+        else
+        {
             animator.SetBool("isJumping", false);
         }
-
         dojump = false;
     }
 
@@ -121,6 +142,12 @@ public class PlayerMove : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
         }  
     }
+
+    private void resetIsJumping()
+    {
+        isJumping = false;
+    }
+
     //Checks if player is touching ground
     void CheckIfGrounded() {
         float extraHeight = 0.5f;
