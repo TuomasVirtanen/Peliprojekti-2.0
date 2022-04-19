@@ -25,9 +25,15 @@ public class SpawnTrash : MonoBehaviour
     [SerializeField]
     private GameObject coffeeMugTrash;
 
+    public static int SpawnCount {get; set;}
+
     void Start()
     {
+        SpawnItem(plastic, CollectableTrash.CollectedPlastics);
         SpawnItem(lid, CollectableTrash.CollectedLids);
+        SpawnItem(pizzaSlice, CollectableTrash.CollectedPizzaSlices);
+        SpawnItem(meal, CollectableTrash.CollectedMeals);
+        SpawnItem(cardboard, CollectableTrash.CollectedCardboards);
         SpawnItem(coffeeMugTrash, CollectableTrash.CollectedCoffeeMugTrashes);
     }
 
@@ -42,6 +48,7 @@ public class SpawnTrash : MonoBehaviour
             areaY = Random.Range(c.bounds.min.y, c.bounds.max.y);
             pos = new Vector2(areaX, areaY);
             Instantiate(trash, pos, trash.transform.rotation);
+            SpawnCount++;
         }
     }
 }
