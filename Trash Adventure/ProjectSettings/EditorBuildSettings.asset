@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/tutorial.unity
     guid: ba247ec932a624d07b41346df3552b05
   - enabled: 1
-    path: Assets/Scenes/Sorting/Lajittelu-tutoriaali.unity
-    guid: 53bc3f20d552ddc4488a4d4f39321a44
-  - enabled: 1
     path: Assets/Scenes/Levels/level 1.unity
     guid: d5b9fea38780b5f4db285bc199fece03
   - enabled: 1
     path: Assets/Scenes/Levels/level 2.unity
     guid: d769c5367dc944f43a184ea3f7a3cd31
+  - enabled: 1
+    path: Assets/Scenes/Sorting/Lajittelu-tutoriaali.unity
+    guid: 53bc3f20d552ddc4488a4d4f39321a44
   - enabled: 1
     path: Assets/Scenes/Sorting/Lajittelu.unity
     guid: 28aecf3ad2d0f9145bf13bd5e7e8b868
@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Olohuone.unity
     guid: f95d761c1cb9c4c9395cc87648214e89
   - enabled: 1

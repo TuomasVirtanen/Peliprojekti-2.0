@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlasticSorting : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Oikein kierrätetyn efekti")]
+    [Tooltip("Oikein kierrï¿½tetyn efekti")]
     private ParticleSystem oikea;
     [SerializeField]
-    [Tooltip("Väärim kierrätetyn efekti")]
+    [Tooltip("Vï¿½ï¿½rim kierrï¿½tetyn efekti")]
     private ParticleSystem wrong;
     private void OnTriggerEnter2D(Collider2D other)
     {
