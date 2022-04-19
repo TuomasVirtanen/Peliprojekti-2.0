@@ -119,7 +119,7 @@ public class PlayerMove : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jump);
                 isJumping = true;
-                Invoke("resetIsJumping", 1f);
+                Invoke("resetIsJumping", 0.5f);
                 CreateDust();
             }
         }
