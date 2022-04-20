@@ -6905,7 +6905,7 @@ GameObject:
   - component: {fileID: 1813165437}
   - component: {fileID: 1813165439}
   - component: {fileID: 1813165438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: penkki
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerTeleporter : MonoBehaviour
 {
@@ -12,8 +13,15 @@ public class PlayerTeleporter : MonoBehaviour
     //on awake, find teleportexit gameobject positions
     void Awake()
     {
-        teleportExit = GameObject.Find("teleportExit").transform.position;
-        teleportExit2 = GameObject.Find("teleportExit2").transform.position;
+        try
+        {
+            teleportExit = GameObject.Find("teleportExit").transform.position;
+            teleportExit2 = GameObject.Find("teleportExit2").transform.position;
+        }
+        catch (NullReferenceException) 
+        {
+         Debug.Log("No teleporter 1 or 2 in level");
+        }
     }
 
     //on collision transform position to either teleport exit 1 or 2

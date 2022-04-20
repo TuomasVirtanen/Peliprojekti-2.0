@@ -215,9 +215,10 @@ GameObject:
   m_Component:
   - component: {fileID: 14607145}
   - component: {fileID: 14607146}
+  - component: {fileID: 14607147}
   m_Layer: 0
   m_Name: Spikes (1)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14607144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.791002, y: 43.526, z: 3048.0295}
+  m_LocalPosition: {x: 31.791002, y: 43.521, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1757628234}
@@ -287,6 +288,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &14607147
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14607144}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.047157288, y: -0.025720596}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.3333335, y: 2.6666667}
+    newSize: {x: 5.3333335, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.964653, y: 0.43742752}
+  m_EdgeRadius: 0
 --- !u!1 &15041439
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +458,7 @@ GameObject:
   - component: {fileID: 16408040}
   - component: {fileID: 16408039}
   - component: {fileID: 16408041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: window (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,6 +946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86782763}
   - component: {fileID: 86782762}
+  - component: {fileID: 86782764}
   m_Layer: 0
   m_Name: Laatikko
   m_TagString: Untagged
@@ -991,6 +1019,32 @@ Transform:
   m_Father: {fileID: 173019707}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &86782764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86782761}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.022713661, y: 0.022756577}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.9666667, y: 3.6333334}
+    newSize: {x: 5.9666667, y: 3.6333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4246998, y: 0.948246}
+  m_EdgeRadius: 0
 --- !u!1 &173019706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1176,7 @@ GameObject:
   - component: {fileID: 213816454}
   - component: {fileID: 213816453}
   - component: {fileID: 213816455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ikkuna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1395,7 +1449,7 @@ GameObject:
   - component: {fileID: 250119299}
   - component: {fileID: 250119298}
   - component: {fileID: 250119300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: window (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1558,7 @@ GameObject:
   - component: {fileID: 266089611}
   - component: {fileID: 266089610}
   - component: {fileID: 266089612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sanky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,9 +1666,10 @@ GameObject:
   m_Component:
   - component: {fileID: 287491753}
   - component: {fileID: 287491754}
+  - component: {fileID: 287491755}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1627,7 +1682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287491752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.795, y: 43.52569, z: 3048.0295}
+  m_LocalPosition: {x: 26.795, y: 43.521, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1757628234}
@@ -1684,6 +1739,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &287491755
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287491752}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03209877, y: -0.038583755}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.3333335, y: 2.6666667}
+    newSize: {x: 5.3333335, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.943325, y: 0.4802971}
+  m_EdgeRadius: 0
 --- !u!1 &324154265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1776,7 @@ GameObject:
   - component: {fileID: 324154267}
   - component: {fileID: 324154266}
   - component: {fileID: 324154268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tuoli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1885,7 @@ GameObject:
   - component: {fileID: 350910841}
   - component: {fileID: 350910840}
   - component: {fileID: 350910842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lautahylly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2148,7 @@ GameObject:
   - component: {fileID: 393660330}
   - component: {fileID: 393660329}
   - component: {fileID: 393660331}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seinahylly2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2309,9 +2390,10 @@ GameObject:
   m_Component:
   - component: {fileID: 488586652}
   - component: {fileID: 488586651}
+  - component: {fileID: 488586653}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2381,6 +2463,32 @@ Transform:
   m_Father: {fileID: 1757628234}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &488586653
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488586650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04298401, y: -0.009210587}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
+    newSize: {x: 2.6666667, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2594986, y: 0.47442245}
+  m_EdgeRadius: 0
 --- !u!1 &512745999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2502,7 @@ GameObject:
   - component: {fileID: 512746002}
   m_Layer: 0
   m_Name: Spikes (3)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,7 +2873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592689215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.253584, y: -2.9843118, z: 3048.0295}
+  m_LocalPosition: {x: -15.253584, y: -2.997, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 173019707}
@@ -2827,7 +2935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d72a4b885e2de6f42aa0f3353dbbfea5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2864,7 +2972,7 @@ GameObject:
   - component: {fileID: 597060277}
   - component: {fileID: 597060276}
   - component: {fileID: 597060278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lipasto lyhyt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2974,7 +3082,7 @@ GameObject:
   - component: {fileID: 623407972}
   m_Layer: 0
   m_Name: spike_roof
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3100,7 +3208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3137,7 +3245,7 @@ GameObject:
   - component: {fileID: 654869704}
   - component: {fileID: 654869703}
   - component: {fileID: 654869705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: lautahylly (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3247,7 +3355,7 @@ GameObject:
   - component: {fileID: 664440697}
   m_Layer: 0
   m_Name: Spike (1)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3527,7 +3635,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3609,7 +3717,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3930,7 +4038,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4049,7 +4157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2e42b3363f5b90d44b21c635c19f3ec2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4086,7 +4194,7 @@ GameObject:
   - component: {fileID: 853612040}
   - component: {fileID: 853612039}
   - component: {fileID: 853612041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seinahylly1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4196,7 +4304,7 @@ GameObject:
   - component: {fileID: 891011405}
   m_Layer: 0
   m_Name: Spike (3)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4411,7 +4519,7 @@ GameObject:
   - component: {fileID: 941247749}
   m_Layer: 0
   m_Name: Spike (2)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4708,7 +4816,7 @@ GameObject:
   - component: {fileID: 1014400151}
   - component: {fileID: 1014400150}
   - component: {fileID: 1014400152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seinahylly2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5095,7 +5203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 129a10b9cdea67743b571c69b4803939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5115,7 +5223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071836085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.763584, y: -3.2143118, z: 3048.0295}
+  m_LocalPosition: {x: -15.763584, y: -3.24, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 173019707}
@@ -5177,7 +5285,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5216,7 +5324,7 @@ GameObject:
   - component: {fileID: 1121174510}
   m_Layer: 0
   m_Name: Spikes (4)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5325,7 +5433,7 @@ GameObject:
   - component: {fileID: 1136090417}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5719,7 +5827,7 @@ GameObject:
   - component: {fileID: 1283040685}
   - component: {fileID: 1283040684}
   - component: {fileID: 1283040686}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: workdesk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6101,7 +6209,7 @@ GameObject:
   - component: {fileID: 1366367932}
   - component: {fileID: 1366367931}
   - component: {fileID: 1366367933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6210,7 +6318,7 @@ GameObject:
   - component: {fileID: 1381427498}
   - component: {fileID: 1381427497}
   - component: {fileID: 1381427499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ikkuna (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6653,9 +6761,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1464637736}
   - component: {fileID: 1464637735}
+  - component: {fileID: 1464637737}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6725,6 +6834,32 @@ Transform:
   m_Father: {fileID: 1757628234}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1464637737
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464637734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.46457672, y: -0.021678925}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
+    newSize: {x: 2.6666667, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3039093, y: 0.44289398}
+  m_EdgeRadius: 0
 --- !u!1 &1468104468
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,7 +6916,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6952,7 +7087,7 @@ GameObject:
   - component: {fileID: 1477677516}
   - component: {fileID: 1477677515}
   - component: {fileID: 1477677517}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: kirjahylly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6998,7 +7133,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: edc822bd12a83c44887bf81b62c58bcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7205,7 +7340,7 @@ GameObject:
   - component: {fileID: 1530441215}
   - component: {fileID: 1530441214}
   - component: {fileID: 1530441216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7395,9 +7530,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1578848067}
   - component: {fileID: 1578848068}
+  - component: {fileID: 1578848069}
   m_Layer: 0
   m_Name: Spikes (2)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7467,6 +7603,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1578848069
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578848066}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02752304, y: -0.029399872}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.3333335, y: 2.6666667}
+    newSize: {x: 5.3333335, y: 2.6666667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9647064, y: 0.47157288}
+  m_EdgeRadius: 0
 --- !u!1 &1579238716
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,7 +7685,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7560,7 +7722,7 @@ GameObject:
   - component: {fileID: 1594382544}
   - component: {fileID: 1594382543}
   - component: {fileID: 1594382545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Silityspoyta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7897,7 +8059,7 @@ GameObject:
   - component: {fileID: 1672697542}
   - component: {fileID: 1672697541}
   - component: {fileID: 1672697543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: kaappi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7963,7 +8125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672697540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.846416, y: 44.425686, z: 3048.0295}
+  m_LocalPosition: {x: 10.846416, y: 44.4, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1416803846}
@@ -8051,7 +8213,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1658d4cfb0b16364ea57c5f881a188db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8133,7 +8295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8341,7 +8503,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8462,7 +8624,7 @@ GameObject:
   - component: {fileID: 1774424280}
   m_Layer: 0
   m_Name: Spikes (1)
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8569,7 +8731,7 @@ GameObject:
   - component: {fileID: 1777964713}
   - component: {fileID: 1777964712}
   - component: {fileID: 1777964714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gaming chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8863,7 +9025,7 @@ GameObject:
   - component: {fileID: 1827699747}
   m_Layer: 0
   m_Name: Spikes3
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9179,7 +9341,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9335,7 +9497,7 @@ GameObject:
   - component: {fileID: 1928097151}
   - component: {fileID: 1928097150}
   - component: {fileID: 1928097152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seinahylly2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9444,7 +9606,7 @@ GameObject:
   - component: {fileID: 1935310222}
   - component: {fileID: 1935310221}
   - component: {fileID: 1935310223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seinahylly2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9625,7 +9787,7 @@ GameObject:
   - component: {fileID: 2028790516}
   - component: {fileID: 2028790515}
   - component: {fileID: 2028790517}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vaatekaappi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9691,7 +9853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028790514}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.477104, y: 45.61157, z: 3048.0295}
+  m_LocalPosition: {x: 41.477104, y: 45.588, z: 3048.0295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1416803846}
@@ -9779,7 +9941,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1301511097
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 300830a380e8e9f4fb2ae2b5f4898043, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

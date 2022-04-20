@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class PlayeCombat : MonoBehaviour
 {
     [SerializeField] private AudioSource attackSound;
-    
+    [SerializeField] private AudioSource deathSound;
+
     public Transform attackPoint;
     public LayerMask enemyLayers;
     private Rigidbody2D rb;
@@ -120,6 +121,7 @@ public class PlayeCombat : MonoBehaviour
     public void Death()
     {
         rb.bodyType = RigidbodyType2D.Static;
+        deathSound.Play();
         animator.SetTrigger("death");
         Debug.Log("PLAYER HAS DIED.");
     }
@@ -136,5 +138,11 @@ public class PlayeCombat : MonoBehaviour
     {
         // Game over scene
         SceneManager.LoadSceneAsync("GameOverMenu", LoadSceneMode.Additive);
+    }
+
+    private void PreventInputScene()
+    {
+        //makes user unable to press anything else before gameovermenu spawns
+        SceneManager.LoadSceneAsync("PreventInputCanvas", LoadSceneMode.Additive);
     }
 }
