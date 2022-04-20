@@ -5,6 +5,12 @@ using UnityEngine;
 public class OutOfBounds : MonoBehaviour
 {
     public GameObject GameOverSetActive;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Awake()
     {
@@ -16,7 +22,7 @@ public class OutOfBounds : MonoBehaviour
         if (other.tag == "Player")
         {
             GameOverSetActive.SetActive(true);
-            Time.timeScale = 0;
+            rb.bodyType = RigidbodyType2D.Static;
         }
     }
 }

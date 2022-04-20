@@ -18,6 +18,7 @@ TagManager:
   - Teleporter2
   - DarkAreaEnter
   - DarkAreaExit
+  - Spike
   layers:
   - Default
   - TransparentFX

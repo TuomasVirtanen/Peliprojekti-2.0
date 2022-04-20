@@ -17,10 +17,8 @@ public class ButtonManager : MonoBehaviour
     // Game over menussa:
     public void TryAgain()
     {
-        GameOverSetActive.SetActive(false);
         ClearAll();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Levelin loppu-menussa

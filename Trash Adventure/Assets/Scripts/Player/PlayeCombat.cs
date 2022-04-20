@@ -10,6 +10,7 @@ public class PlayeCombat : MonoBehaviour
     
     public Transform attackPoint;
     public LayerMask enemyLayers;
+    private Rigidbody2D rb;
 
 
     [Header("Attack stats")]
@@ -34,6 +35,7 @@ public class PlayeCombat : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
 
         Button btn = attackButton.GetComponent<Button>();
         btn.onClick.AddListener(buttonAttack);
@@ -44,7 +46,6 @@ public class PlayeCombat : MonoBehaviour
         healthBar = hpAsChild.GetComponentInChildren<Healthbar>();
         healthBar.enemy = gameObject;
 
-
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);//UI
         healthBar = healthBar.GetComponent<Healthbar>();
@@ -52,8 +53,6 @@ public class PlayeCombat : MonoBehaviour
         {
             Debug.Log("Enemy " + this.gameObject + " doesn't have the healthbar component added to it");
         }
-
-
     }
 
     void Update()
@@ -79,11 +78,7 @@ public class PlayeCombat : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            
         }
-
-        
-
     }
 
     void EndAttackAnim()
@@ -102,10 +97,7 @@ public class PlayeCombat : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("PLAYER HAS DIED.");
-            // Game over scene
-            Time.timeScale = 0;
-            SceneManager.LoadSceneAsync("GameOverMenu", LoadSceneMode.Additive);
+            Death();
         }
     }
 
@@ -123,5 +115,26 @@ public class PlayeCombat : MonoBehaviour
     public void buttonAttack()
     {
         doAttack = true;
+    }
+
+    public void Death()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        animator.SetTrigger("death");
+        Debug.Log("PLAYER HAS DIED.");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            Death();
+        }
+    }
+
+    private void GameOverScene()
+    {
+        // Game over scene
+        SceneManager.LoadSceneAsync("GameOverMenu", LoadSceneMode.Additive);
     }
 }

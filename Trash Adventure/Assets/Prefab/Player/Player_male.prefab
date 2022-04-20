@@ -6839,6 +6839,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8293463436737606398, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
+      propertyPath: GameOverSetActive
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8293463436737606399, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
       propertyPath: m_Name
       value: ButtonManager
