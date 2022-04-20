@@ -6181,8 +6181,8 @@ MonoBehaviour:
   speed: 4
   jump: 15
   jumpExtended: 0.4
-  jumpSound: {fileID: 0}
-  footstep: {fileID: 0}
+  jumpSound: {fileID: 8606669111168145188}
+  footstep: {fileID: 6746915450441572615}
   isGroundedChecker: {fileID: 5877480921582876471}
   groundLayer:
     serializedVersion: 2
@@ -6205,7 +6205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2e40afe8ad16c419e5cd59d26bd251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8809551864002222870}
   attackPoint: {fileID: 6419355482850540760}
   enemyLayers:
     serializedVersion: 2
