@@ -20,21 +20,37 @@ public class SpawnTrash : MonoBehaviour
     private GameObject meal;
 
     [SerializeField]
+    private GameObject bio;
+
+    [SerializeField]
     private GameObject cardboard;
     
     [SerializeField]
     private GameObject coffeeMugTrash;
 
+    [SerializeField]
+    private GameObject metal;
+
     public static int SpawnCount {get; set;}
+    public static bool NothingToSpawn {get; set;}
 
     void Start()
     {
+        NothingToSpawn = false;
         SpawnItem(plastic, CollectableTrash.CollectedPlastics);
         SpawnItem(lid, CollectableTrash.CollectedLids);
         SpawnItem(pizzaSlice, CollectableTrash.CollectedPizzaSlices);
         SpawnItem(meal, CollectableTrash.CollectedMeals);
+        SpawnItem(bio, CollectableTrash.CollectedBios);
         SpawnItem(cardboard, CollectableTrash.CollectedCardboards);
         SpawnItem(coffeeMugTrash, CollectableTrash.CollectedCoffeeMugTrashes);
+        SpawnItem(metal, CollectableTrash.CollectedMetals);
+        Debug.Log("SpawnCount:" + SpawnCount);
+        if(SpawnCount == 0)
+        {
+            NothingToSpawn = true;
+            Debug.Log("Ei mitään spawnattavaa");
+        }
     }
 
     private void SpawnItem(GameObject trash, int trashAmount)

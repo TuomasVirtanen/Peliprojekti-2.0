@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 322869192}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: LevelTwo
+        m_MethodName: LevelThree
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f6bc3df5106411c86ee553574b9757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverSetActive: {fileID: 0}
 --- !u!4 &322869193
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,7 +1271,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 322869192}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: LevelTwo
+        m_MethodName: LevelFour
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

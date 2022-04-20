@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Sorting/Lajittelu-tutoriaali.unity
     guid: 53bc3f20d552ddc4488a4d4f39321a44
   - enabled: 1
-    path: Assets/Scenes/Sorting/Lajittelu.unity
+    path: Assets/Scenes/Sorting/Lajittelu 1.unity
     guid: 28aecf3ad2d0f9145bf13bd5e7e8b868
   - enabled: 1
     path: Assets/Scenes/Menu/GameOverMenu.unity
@@ -39,6 +39,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/PauseMenu.unity
     guid: 92d165c892db51641bc5c2a52cce9891
   - enabled: 1
-    path: Assets/Scenes/Menu/LevelEndingMenu.unity
+    path: Assets/Scenes/Menu/LevelEndingMenus/LevelEndingMenu1.unity
     guid: 6ce7946504f9b8e4a80013ce628703d3
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelEndingMenus/LevelEndingMenu4.unity
+    guid: bf9c5812bffd6da41878a42856f32de2
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelEndingMenus/LevelEndingMenuTutorial.unity
+    guid: 89107c972c7531b4bb2a33484001a11c
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelEndingMenus/LevelEndingMenu3.unity
+    guid: 85c5c020d960b9b418a2779c69a3d90b
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelEndingMenus/LevelEndingMenu2.unity
+    guid: d564d8e21760a6a4cb2f15154d221b64
+  - enabled: 1
+    path: Assets/Scenes/Sorting/Lajittelu 2.unity
+    guid: 97f76652a6278c245b5090b2f4f468da
+  - enabled: 1
+    path: Assets/Scenes/Sorting/Lajittelu 3.unity
+    guid: 2e9ff2cfaa6591c4e979dcc14b070b41
+  - enabled: 1
+    path: Assets/Scenes/Sorting/Lajittelu 4.unity
+    guid: 20733e513679bcb4b886f7b6cc649a2a
   m_configObjects: {}

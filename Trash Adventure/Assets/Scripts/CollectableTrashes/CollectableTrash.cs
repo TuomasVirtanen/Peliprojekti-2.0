@@ -8,8 +8,10 @@ public class CollectableTrash : MonoBehaviour
     public static int CollectedLids {get; set;}
     public static int CollectedPizzaSlices {get; set;}
     public static int CollectedMeals {get; set;}
+    public static int CollectedBios {get; set;}
     public static int CollectedCardboards {get; set;}
     public static int CollectedCoffeeMugTrashes {get; set;}
+    public static int CollectedMetals {get; set;}
     
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,6 +39,11 @@ public class CollectableTrash : MonoBehaviour
                 CollectedMeals++;
             }
 
+            if(this.CompareTag("Bio"))
+            {
+                CollectedBios++;
+            }
+
             if(this.CompareTag("Cardboard"))
             {
                 CollectedCardboards++;
@@ -45,6 +52,11 @@ public class CollectableTrash : MonoBehaviour
             if(this.CompareTag("CoffeeMugTrash"))
             {
                 CollectedCoffeeMugTrashes++;
+            }
+
+            if(this.CompareTag("Metal"))
+            {
+                CollectedMetals++;
             }
 
             Destroy(gameObject);

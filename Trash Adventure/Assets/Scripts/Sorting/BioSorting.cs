@@ -5,20 +5,20 @@ using UnityEngine;
 public class BioSorting : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Oikein kierrätetyn efekti")]
+    [Tooltip("Oikein kierrï¿½tetyn efekti")]
     private ParticleSystem oikea;
     [SerializeField]
-    [Tooltip("Väärim kierrätetyn efekti")]
+    [Tooltip("Vï¿½ï¿½rim kierrï¿½tetyn efekti")]
     private ParticleSystem wrong;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Bio")
+        if(other.tag == "Bio" || other.tag == "Meal" || other.tag == "PizzaSlice")
         {
             Debug.Log("Correct");
             Instantiate(oikea, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
-        else if(other.tag != "Bio")
+        else
         {
             Debug.Log("Wrong bin");
             Instantiate(wrong, transform.position, Quaternion.identity);

@@ -9803,7 +9803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48c9ccd65b224938a1a0bcc99a0570d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Lajittelu-tutoriaali
+  sceneToLoad: Lajittelu 4
 --- !u!60 &2124994750
 PolygonCollider2D:
   m_ObjectHideFlags: 0
