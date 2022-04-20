@@ -15,6 +15,9 @@ public class PlayerMove : MonoBehaviour
     float jumpTimer = 0;
     private bool isJumping;
 
+    [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource footstep;
+
     bool isGrounded = false; 
     public Transform isGroundedChecker; 
     public LayerMask groundLayer;
@@ -55,11 +58,9 @@ public class PlayerMove : MonoBehaviour
         if (joystick.Horizontal >= .2f)
         {
             moveBy = speed;
-            SoundManagerScript.PlaySound("run");
         } else if (joystick.Horizontal <= -.2f)
         {
             moveBy = -speed;
-            SoundManagerScript.PlaySound("run");
         } else
         {
             moveBy = 0;
@@ -119,7 +120,7 @@ public class PlayerMove : MonoBehaviour
             jumpTimer -= Time.deltaTime;
             if (dojump && !isJumping)
             {
-                SoundManagerScript.PlaySound("jump");
+                jumpSound.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jump);
                 isJumping = true;
                 Invoke("resetIsJumping", 0.5f);
@@ -165,5 +166,10 @@ public class PlayerMove : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+
+    private void Footstep()
+    {
+        footstep.Play();
     }
 }

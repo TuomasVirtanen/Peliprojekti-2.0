@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayeCombat : MonoBehaviour
 {
+    [SerializeField] private AudioSource attackSound;
     
     public Transform attackPoint;
     public LayerMask enemyLayers;
@@ -71,7 +72,7 @@ public class PlayeCombat : MonoBehaviour
     {
         doAttack = false;
         animator.SetBool("isAttacking", true);
-        SoundManagerScript.PlaySound("hit");
+        attackSound.Play();
         //detect enemies in range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
