@@ -7,6 +7,7 @@ public class PlayerTeleporter : MonoBehaviour
     //define teleportExits
     private Vector3 teleportExit;
     private Vector3 teleportExit2;
+    [SerializeField] private AudioSource teleport;
 
     //on awake, find teleportexit gameobject positions
     void Awake()
@@ -20,11 +21,13 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if (collision.tag == "Teleporter")
         {
+            teleport.Play();
             transform.position = teleportExit;
         }
 
         if (collision.tag == "Teleporter2")
         {
+            teleport.Play();
             transform.position = teleportExit2;
         }
     }
