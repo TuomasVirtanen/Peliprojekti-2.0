@@ -12,6 +12,7 @@ public class SceneTransition : MonoBehaviour
         if(other.CompareTag("Player") && !other.isTrigger)
         {
             SceneManager.LoadScene(sceneToLoad);
+            PointSystem.instance.endOfLevelTime();
         }
     }
 }

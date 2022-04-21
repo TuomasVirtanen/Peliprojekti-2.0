@@ -8,15 +8,20 @@ public class PointSystem : MonoBehaviour
     public static PointSystem instance;
 
     public Text Points;
-    
+    public Text Time;
+
     int pointsCounter = 0;
     public int collectedPoints = 0;
 
     public Text highscore;
 
+    public int totalTime = 9000;
+    public int timeRemaining;
+
     private void Awake()
     {
         instance = this;
+        timeRemaining = totalTime;
     }
 
     // Update is called once per frame
@@ -25,8 +30,13 @@ public class PointSystem : MonoBehaviour
         CountPoints();
         Points.text = "Points: " + pointsCounter.ToString();
         highscore.text = "Highscore: " + PlayerPrefs.GetInt("HighScore").ToString();
+        Time.text  = "Time: " + (timeRemaining / 50).ToString();
     }
 
+    void FixedUpdate()
+    {
+        timeRemaining = timeRemaining - 1;
+    }
     
     public void addPoints(int a)
     {
@@ -53,9 +63,10 @@ public class PointSystem : MonoBehaviour
         }
 
     }
-    void GetHighScore()
+
+    public void endOfLevelTime()
     {
-        
+        collectedPoints = collectedPoints + (timeRemaining / 5);
     }
 
 }

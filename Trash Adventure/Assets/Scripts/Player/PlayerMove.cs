@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Button btn = JumpButton.GetComponent<Button>();
         btn.onClick.AddListener(buttonJump);
+        
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
     }
 
@@ -51,6 +53,7 @@ public class PlayerMove : MonoBehaviour
         Jump();
         Fall();
         BetterJump();
+        
     }
 
     void Move()
@@ -142,7 +145,7 @@ public class PlayerMove : MonoBehaviour
     void BetterJump() {
         if (rb.velocity.y < 0) {
             rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
+        } else if (rb.velocity.y > 0 && !dojump) {
             rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
         }  
     }
@@ -168,8 +171,10 @@ public class PlayerMove : MonoBehaviour
         dust.Play();
     }
 
-    private void Footstep()
-    {
+    private void Footstep(){
         footstep.Play();
     }
+
+
+
 }
