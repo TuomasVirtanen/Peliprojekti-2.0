@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 222295815}
   - component: {fileID: 222295817}
   - component: {fileID: 222295816}
+  - component: {fileID: 222295818}
   m_Layer: 5
   m_Name: Highscore
   m_TagString: Untagged
@@ -391,6 +392,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222295814}
   m_CullTransparentMesh: 1
+--- !u!114 &222295818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222295814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5447b0abefbdb4b878f15f2fd8b4f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highscore: {fileID: 222295816}
+  Points: {fileID: 714891620}
 --- !u!1 &497558097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,7 +1917,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6929840352423504984, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
 --- !u!114 &2002948748 stripped
 MonoBehaviour:

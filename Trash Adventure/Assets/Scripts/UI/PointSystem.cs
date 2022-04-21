@@ -47,6 +47,8 @@ public class PointSystem : MonoBehaviour
     {
         if(collectedPoints > 0)
         {
+            PlayerPrefs.SetInt("lastLevelPoints",collectedPoints);
+
             for(int i = 0; collectedPoints > i;collectedPoints--)
             {
                 pointsCounter++;
