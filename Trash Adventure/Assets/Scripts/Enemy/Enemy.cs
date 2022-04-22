@@ -164,11 +164,10 @@ public class Enemy : MonoBehaviour
     public bool PlayerInSight()
     {
         hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * transform.localScale.x * rangeColliderDistance, 
-        new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
+        new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y + 0.5f, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
 
         if(hit.collider == null) { return false; } //Jos collider ei ole pelaaja, palauta false.
-        
-       
+
         /*
           if(hit.collider != null)
         {
@@ -184,7 +183,7 @@ public class Enemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * transform.localScale.x * rangeColliderDistance, 
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y+0.5f, boxCollider.bounds.size.z));
     }
 
     private void DamagePlayer()
