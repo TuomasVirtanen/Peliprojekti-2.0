@@ -216,6 +216,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   maxHealth: 100
+  HPOffset: {x: 0, y: 0, z: 0}
   HP_enemy: {fileID: 4969488872166544654, guid: 4580433a5ddc50844995c162102e4a43, type: 3}
   death: {fileID: 133676282936407318, guid: d755a07ee4f231b4c9abc95cb4070b4c, type: 3}
   trash1: {fileID: 5630864215039784698, guid: 8ca28d1d5828a344ea1aaf777fc93cd6, type: 3}
@@ -234,5 +235,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.12}
-  m_Size: {x: 1.77, y: 0.79}
+  m_Size: {x: 2.97, y: 0.79}
   m_Direction: 1
