@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header ("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
+    [SerializeField] public float attackCooldown; //public, sillä boxenemy haluaa sen
     [SerializeField] private float range;
     [SerializeField] private float rangeColliderDistance;
     [SerializeField] private int damage;

@@ -22,7 +22,11 @@ public class BoxEnemy : MonoBehaviour
 
     [Header ("Vihollisen asetukset")]
     private Animator animator; //Initalized in Awake
-    
+
+    //Timer attributes
+    private float attackCooldown; //init in awake
+    private float timeElapsed = 0;
+    private bool canattack = false;
 
      void Start()
     {
@@ -32,12 +36,14 @@ public class BoxEnemy : MonoBehaviour
     
         rigidbody = GetComponent<Rigidbody2D>();
         if (rigidbody == null) { Debug.Log("Boxenemyllä ei ole RB2D-komponenttia (Käytetään hyökkäykseen)"); }
-    
-        
+
+        attackCooldown = GetComponent<Enemy>().attackCooldown;
     }
     private void FixedUpdate()
     {
-       
+        //Timer
+        if(timeElapsed < attackCooldown+1f) { timeElapsed += Time.deltaTime; } //Jos monta vihollista niin ei tarvitse kokoajan kirjoittaa muistiin kaikkea paskaa
+        else{canattack = true;}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,23 +63,33 @@ public class BoxEnemy : MonoBehaviour
                 {
                     transform.localScale = new Vector3(currentScale.x*-1, currentScale.y);
                 }
-                rigidbody.AddForce(AttackPosition * thrust, ForceMode2D.Impulse);
+               
+                if (canattack) { rigidbody.AddForce(AttackPosition * thrust, ForceMode2D.Impulse);
+                    timeElapsed = 0f; //reset timer
+                    canattack = false;
+                }
             }
-            else
+            else //Jos ei ole oikealla, niin on pakko olla vasemmalla
             {
                 //Vasemmalla puolella
                 if (currentScale.x < 0)
                 {
                     transform.localScale = new Vector3(currentScale.x * -1, currentScale.y);
                 }
+
+                
                 //Ylösmenevä energia on aina sama, mutta x:n suuntainen voima muuttuu.
-                rigidbody.AddForce(new Vector2((AttackPosition.x)*-1 * thrust, AttackPosition.y * thrust), ForceMode2D.Impulse);
+                if (canattack) {rigidbody.AddForce(new Vector2((AttackPosition.x) * -1 * thrust, AttackPosition.y * thrust), ForceMode2D.Impulse);
+                    timeElapsed = 0f; //reset timer
+                    canattack = false;
+                }
                 
             }
            
         }
     }
 
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         

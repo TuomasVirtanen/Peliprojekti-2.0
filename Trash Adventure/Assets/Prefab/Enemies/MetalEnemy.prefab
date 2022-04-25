@@ -170,3 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 7417782979182263838, guid: c36e038ee3207b5488d251e1863d8c2e, type: 3}
+  blast: {x: 0, y: 20}

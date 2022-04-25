@@ -193,8 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2fcc3c17e62464a8f5eb3636fe1885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 1
-  AttackPosition: {x: 4, y: 5}
+  thrust: 3
+  AttackPosition: {x: 2, y: 4}
 --- !u!114 &7245785844416024313
 MonoBehaviour:
   m_ObjectHideFlags: 0
