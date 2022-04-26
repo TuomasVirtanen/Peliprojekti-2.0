@@ -78,7 +78,9 @@ public class PlayeCombat : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            //Korjaa boxenemyt tuo if
+            if(enemy.GetType() == typeof(BoxCollider2D)) { enemy.GetComponent<Enemy>().TakeDamage(attackDamage);}
+            
         }
     }
 
