@@ -105,12 +105,15 @@ public class PlayeCombat : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
     }
 
-    public void Death()
+    private void Death()
     {
+        PreventInputScene();
+        Destroy(gameObject.GetComponent<BoxCollider2D>());
         rb.bodyType = RigidbodyType2D.Static;
         deathSound.Play();
         animator.SetTrigger("death");
         Debug.Log("PLAYER HAS DIED.");
+        Invoke("GameOverScene", 1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

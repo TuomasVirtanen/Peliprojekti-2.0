@@ -8,7 +8,14 @@ public class PlayerPos : MonoBehaviour
 
     void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.CheckPointPos;
+        try
+        {
+            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+            transform.position = gm.CheckPointPos;
+        }
+        catch
+        {
+            Debug.Log("no gm on the scene");
+        }
     }
 }
