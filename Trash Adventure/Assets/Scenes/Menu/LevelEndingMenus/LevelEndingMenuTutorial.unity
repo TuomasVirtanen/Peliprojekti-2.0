@@ -976,9 +976,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1364341536}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: TryAgain1
+        m_MethodName: TryAgainTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1083,6 +1083,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
+--- !u!114 &1364341536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8293463436737606398, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
+  m_PrefabInstance: {fileID: 1364341535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f6bc3df5106411c86ee553574b9757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1469589421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1389,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1364341536}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: GoMainMenu
         m_Mode: 1
@@ -1511,7 +1522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1364341536}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
         m_MethodName: LevelSelection
         m_Mode: 1
@@ -1815,9 +1826,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1364341536}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: NextLevel1
+        m_MethodName: NextLevelTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
