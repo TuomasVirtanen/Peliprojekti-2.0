@@ -19,6 +19,8 @@ TagManager:
   - DarkAreaEnter
   - DarkAreaExit
   - Spike
+  - Checkpoint
+  - GM
   layers:
   - Default
   - TransparentFX

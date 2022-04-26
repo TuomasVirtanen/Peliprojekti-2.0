@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8873407949228103855}
   - component: {fileID: 4433544466428350934}
   - component: {fileID: 1714338690989012098}
+  - component: {fileID: 1644191346544853789}
   m_Layer: 5
   m_Name: AttackButton
   m_TagString: Untagged
@@ -254,6 +255,35 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1644191346544853789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994938863206347676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2790326049060939242}
+          m_TargetAssemblyTypeName: PlayeCombat, Assembly-CSharp
+          m_MethodName: TryAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1110298055465782156
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a74f678ee8f3bd49aacf3de1ae4bcaa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -585,6 +615,7 @@ GameObject:
   - component: {fileID: 1841252236175741714}
   - component: {fileID: -8709372307184314216}
   - component: {fileID: 4585276230622320931}
+  - component: {fileID: 7008642575775465815}
   m_Layer: 3
   m_Name: Player_female
   m_TagString: Player
@@ -725,8 +756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 6412849065738978518}
   speed: 4
-  jump: 15
+  jump: 10
   jumpExtended: 0.4
+  jumpTimer: 0
   jumpSound: {fileID: 6515849262363435779}
   footstep: {fileID: 1841252236175741714}
   isGroundedChecker: {fileID: 1926868909382344473}
@@ -737,8 +769,6 @@ MonoBehaviour:
   lowJumpMultiplier: 2
   animator: {fileID: 1292812144755730883}
   joystick: {fileID: 2250373574467812646}
-  JumpButton: {fileID: 1628739153478819680}
-  dojump: 0
 --- !u!114 &2790326049060939242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,8 +794,6 @@ MonoBehaviour:
   animator: {fileID: 1292812144755730883}
   maxHealth: 100
   player_HP: {fileID: 7920807471709440086, guid: 7ee75361d51045e4ca3cfeb2a1953d13, type: 3}
-  attackButton: {fileID: 1714338690989012098}
-  doAttack: 0
 --- !u!95 &1292812144755730883
 Animator:
   serializedVersion: 3
@@ -1291,6 +1319,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7008642575775465815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664115991521068070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93641988dc8884a44b9ced664f7547ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3053103454702685714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1683,7 @@ GameObject:
   - component: {fileID: 1243572514841260640}
   - component: {fileID: 3854351678151959343}
   - component: {fileID: 1628739153478819680}
+  - component: {fileID: 4279034512608163207}
   m_Layer: 5
   m_Name: JumpButton
   m_TagString: Untagged
@@ -1697,7 +1738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ee6dc72ff0caa2429924b337f76394f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09849a0b00a76e84587e6c9dc81eaa38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1751,6 +1792,35 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4279034512608163207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5456015824918314874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4468785335480210120}
+          m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+          m_MethodName: TryJump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7492902862917628292
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,6 +7029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
+--- !u!4 &7594265668934449105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8293463436737606393, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
+  m_PrefabInstance: {fileID: 1908415107636348200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7594265668934449110 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8293463436737606398, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
@@ -6970,8 +7045,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f6bc3df5106411c86ee553574b9757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7594265668934449105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8293463436737606393, guid: 2b6a7b6b3d527604996e01f9b728ec03, type: 3}
-  m_PrefabInstance: {fileID: 1908415107636348200}
-  m_PrefabAsset: {fileID: 0}

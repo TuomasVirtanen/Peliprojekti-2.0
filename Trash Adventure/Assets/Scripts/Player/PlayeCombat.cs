@@ -31,15 +31,9 @@ public class PlayeCombat : MonoBehaviour
     private GameObject player_HP;
     Healthbar healthBar;
 
-    public Button attackButton;
-    public bool doAttack = false;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        Button btn = attackButton.GetComponent<Button>();
-        btn.onClick.AddListener(buttonAttack);
 
         //TODO::
         //Samalla tavalla instantiate toi HP_bar kun enemy.cs scriptiss�kin, toivoen ett� se korjaisi kaikki ongelmat koska en en�� tii� miten muutenkaan saisin sit� kuntoon.
@@ -56,21 +50,17 @@ public class PlayeCombat : MonoBehaviour
         }
     }
 
-    void Update()
+    public void TryAttack()
     {   
         if(Time.time >= nextAttackTime)
         {
-            if(doAttack)
-            {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
-            }
         }
     }
 
     void Attack()
     {
-        doAttack = false;
         animator.SetBool("isAttacking", true);
         attackSound.Play();
         //detect enemies in range
@@ -113,11 +103,6 @@ public class PlayeCombat : MonoBehaviour
         }
 
         Gizmos.DrawWireSphere(attackPoint.position,attackRange);
-    }
-
-    public void buttonAttack()
-    {
-        doAttack = true;
     }
 
     public void Death()

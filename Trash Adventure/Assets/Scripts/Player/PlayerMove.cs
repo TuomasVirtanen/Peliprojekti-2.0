@@ -12,8 +12,9 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public float jump;
     public float jumpExtended = 0.1f;
-    float jumpTimer = 0;
+    public float jumpTimer = 0;
     private bool isJumping;
+    private bool doJump;
 
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource footstep;
@@ -27,19 +28,15 @@ public class PlayerMove : MonoBehaviour
     float moveBy = 0f;
 
     public Joystick joystick;
-    public Button JumpButton;
-    public bool dojump = false;
     private BoxCollider2D boxCollider2d;
 
     private bool FacingRight = true;
 
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Button btn = JumpButton.GetComponent<Button>();
-        btn.onClick.AddListener(buttonJump);
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
     }
 
@@ -48,9 +45,7 @@ public class PlayerMove : MonoBehaviour
     {
         CheckIfGrounded();
         Move();
-        Jump();
         Fall();
-        BetterJump();
     }
 
     void Move()
@@ -100,12 +95,12 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
     }
-
-    public void buttonJump()
-    {
-        dojump = true;
-    }
     
+    public void TryJump()
+    {
+        Jump();
+    }
+
     // Jump animation condition
     void Jump()
     {
@@ -118,17 +113,17 @@ public class PlayerMove : MonoBehaviour
         if (jumpTimer > 0)
         {
             jumpTimer -= Time.deltaTime;
-            if (dojump && !isJumping)
+            if (!isJumping)
             {
                 jumpSound.Play();
                 rb.velocity = new Vector2(rb.velocity.x, jump);
                 isJumping = true;
-                Invoke("resetIsJumping", 0.5f);
+
                 CreateDust();
             }
         }
 
-        if (rb.velocity.y > 0.01 && !isGrounded)
+        if (rb.velocity.y > 0.01)
         {
             animator.SetBool("isJumping", true);
         }
@@ -136,28 +131,16 @@ public class PlayerMove : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-        dojump = false;
-    }
-
-    void BetterJump() {
-        if (rb.velocity.y < 0) {
-            rb.velocity += Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
-            rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }  
-    }
-
-    private void resetIsJumping()
-    {
-        isJumping = false;
     }
 
     //Checks if player is touching ground
     void CheckIfGrounded() {
-        float extraHeight = 0.5f;
+        float extraHeight = 0.2f;
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down, extraHeight, groundLayer);
         if (raycastHit.collider != null) { 
             isGrounded = true;
+            isJumping = false;
+            animator.SetBool("isJumping", false);
         } else { 
             isGrounded = false;
         }

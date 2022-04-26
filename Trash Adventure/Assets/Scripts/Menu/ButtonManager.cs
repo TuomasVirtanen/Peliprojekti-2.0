@@ -103,6 +103,7 @@ public class ButtonManager : MonoBehaviour
     public void LevelFour()
     {
         ClearAll();
+        Destroy(GameObject.FindGameObjectWithTag("GM"));
         SceneManager.LoadScene("level 4");
         Time.timeScale = 1;
     }
