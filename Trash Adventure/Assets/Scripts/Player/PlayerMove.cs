@@ -99,6 +99,14 @@ public class PlayerMove : MonoBehaviour
         else {
             animator.SetBool("isFalling", false);
         }
+        if (rb.velocity.y > 0.01 && !isGrounded)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
     
     public void TryJump()
@@ -128,14 +136,7 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y > 0.01)
-        {
-            animator.SetBool("isJumping", true);
-        }
-        else
-        {
-            animator.SetBool("isJumping", false);
-        }
+
     }
 
     //Checks if player is touching ground
