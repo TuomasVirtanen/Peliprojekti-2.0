@@ -15,6 +15,7 @@ public class ObjectChecker : MonoBehaviour
         {
             Debug.Log("ei ollu mitään spawnattavaa");
             endingSceneLoaded = true;
+            PointSystem.instance.CountPoints();
             SceneManager.LoadSceneAsync(levelEndingScene, LoadSceneMode.Additive);
         }
     }
@@ -27,6 +28,7 @@ public class ObjectChecker : MonoBehaviour
         }
         else
         {
+            PointSystem.instance.CountPoints();
             SceneManager.LoadSceneAsync(levelEndingScene, LoadSceneMode.Additive);
         }
     }
