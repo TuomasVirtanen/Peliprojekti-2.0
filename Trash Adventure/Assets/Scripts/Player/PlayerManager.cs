@@ -16,14 +16,14 @@ public class PlayerManager : MonoBehaviour
     characterIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
         try
         {
-            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-            GameObject player = Instantiate(playerPrefabs[characterIndex], gm.CheckPointPos, Quaternion.identity);
+            Vector3 spawnpoint = GameObject.Find("Spawnpoint").transform.position;
+            GameObject player = Instantiate(playerPrefabs[characterIndex], spawnpoint, Quaternion.identity);
             VCam.m_Follow = player.transform;
         }
         catch
         {
-            Vector3 spawnpoint = GameObject.Find("Spawnpoint").transform.position;
-            GameObject player = Instantiate(playerPrefabs[characterIndex], spawnpoint, Quaternion.identity);
+            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+            GameObject player = Instantiate(playerPrefabs[characterIndex], gm.CheckPointPos, Quaternion.identity);
             VCam.m_Follow = player.transform;
         }    
     }
