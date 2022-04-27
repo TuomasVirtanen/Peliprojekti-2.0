@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header ("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
+    [SerializeField] public float attackCooldown; //public, sillä boxenemy haluaa sen
     [SerializeField] private float range;
     [SerializeField] private float rangeColliderDistance;
     [SerializeField] private int damage;
@@ -138,12 +138,19 @@ public class Enemy : MonoBehaviour
            
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
-           
+
 
             // Droppaa roska-itemit
             //Lisäsin roskien droppaukseen pientä randomia t aaro :)
-            Instantiate(trash1, transform.position + new Vector3(Random.Range(0.7f, 1f), Random.Range(0.2f, 0.4f)), Quaternion.identity);
-            Instantiate(trash2, transform.position, Quaternion.identity);
+            try
+            {
+                Instantiate(trash1, transform.position + new Vector3(Random.Range(0.7f, 1f), Random.Range(0.2f, 0.4f)), Quaternion.identity);
+                Instantiate(trash2, transform.position, Quaternion.identity);
+            }
+            catch (UnassignedReferenceException)
+            {
+                Debug.Log("Enemy didnt have 2nd trash");
+            }
 
             PointSystem.instance.addPoints(100);
 
