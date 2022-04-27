@@ -16,12 +16,14 @@ public class MetalSorting : MonoBehaviour
         {
             Debug.Log("Correct");
             Instantiate(oikea, transform.position, Quaternion.identity);
+            PointSystem.instance.addPoints(300);
             Destroy(other.gameObject);
         }
         else
         {
             Debug.Log("Wrong bin");
             Instantiate(wrong, transform.position, Quaternion.identity);
+            PointSystem.instance.addPoints(-100);
             Destroy(other.gameObject);
         }
     }

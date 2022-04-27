@@ -5,10 +5,10 @@ using UnityEngine;
 public class CardboardSorting : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Oikein kierrätetyn efekti")]
+    [Tooltip("Oikein kierrï¿½tetyn efekti")]
     private ParticleSystem oikea;
     [SerializeField]
-    [Tooltip("Väärim kierrätetyn efekti")]
+    [Tooltip("Vï¿½ï¿½rim kierrï¿½tetyn efekti")]
     private ParticleSystem wrong;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,12 +17,14 @@ public class CardboardSorting : MonoBehaviour
             Debug.Log("Correct");
 
             Instantiate(oikea, transform.position, Quaternion.identity);
+            PointSystem.instance.addPoints(300);
             Destroy(other.gameObject);
         }
         else
         {
             Debug.Log("Wrong bin");
             Instantiate(wrong, transform.position, Quaternion.identity);
+            PointSystem.instance.addPoints(-100);
             Destroy(other.gameObject);
         }
     }
