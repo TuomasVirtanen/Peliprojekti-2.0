@@ -593,6 +593,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900512078}
     m_Modifications:
+    - target: {fileID: 4045201787095296431, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
+      propertyPath: thrust
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4045201787095296432, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
       propertyPath: damage
       value: 5
@@ -662,6 +666,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900512078}
     m_Modifications:
+    - target: {fileID: 4045201787095296431, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
+      propertyPath: thrust
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4045201787095296432, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
       propertyPath: damage
       value: 5
@@ -2913,7 +2921,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994225061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.702488, y: -20.047657, z: -5.4961925}
+  m_LocalPosition: {x: -43.49736, y: -20.058544, z: -5.4961925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1924692690}
@@ -3252,6 +3260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900512078}
     m_Modifications:
+    - target: {fileID: 4045201787095296431, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
+      propertyPath: thrust
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4045201787095296432, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
       propertyPath: damage
       value: 5
@@ -3537,6 +3549,10 @@ PrefabInstance:
     - target: {fileID: 1326139428329351476, guid: 02684af7f74d59c40bd7c5974cb9e14d, type: 3}
       propertyPath: m_Name
       value: Pizza_Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326139428329351484, guid: 02684af7f74d59c40bd7c5974cb9e14d, type: 3}
+      propertyPath: thrust
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02684af7f74d59c40bd7c5974cb9e14d, type: 3}
@@ -5276,6 +5292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1900512078}
     m_Modifications:
+    - target: {fileID: 4045201787095296431, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
+      propertyPath: thrust
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4045201787095296432, guid: f1e80ba3b79e05a4c9a2b77e8ffa0663, type: 3}
       propertyPath: damage
       value: 5

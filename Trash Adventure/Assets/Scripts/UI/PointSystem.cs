@@ -11,8 +11,8 @@ public class PointSystem : MonoBehaviour
     public Text Points;
     public Text Time;
 
-    int pointsCounter = 0;
-    public int collectedPoints = 0;
+    int pointsCounter;
+    public int collectedPoints;
 
     public Text highscore;
 
@@ -35,6 +35,7 @@ public class PointSystem : MonoBehaviour
         m_Scene = SceneManager.GetActiveScene();
         sceneName = m_Scene.name;
         PlayerPrefs.SetString("lastSceneName", sceneName);
+        pointsCounter = 0;
     }
 
     // Update is called once per frame
@@ -66,7 +67,7 @@ public class PointSystem : MonoBehaviour
             pointsCounter++;
         } 
         SetHighScore(sceneName); 
-        if(pointsCounter > PlayerPrefs.GetInt("lastLevelPoints")) {PlayerPrefs.SetInt("lastLevelPoints",pointsCounter);}
+        PlayerPrefs.SetInt("lastLevelPoints",pointsCounter);
     }
 
     void SetHighScore(string level)

@@ -16,6 +16,6 @@ public class MenuPoints : MonoBehaviour
     {
 
         Points.text = "Saadut pisteet: " + PlayerPrefs.GetInt("lastLevelPoints").ToString();
-        Highscore.text = "Ennatys: " + PlayerPrefs.GetInt(PlayerPrefs.GetString("lastSceneName")).ToString();
+        Highscore.text = "Ennätys: " + PlayerPrefs.GetInt(PlayerPrefs.GetString("lastSceneName")).ToString();
     }
 }
